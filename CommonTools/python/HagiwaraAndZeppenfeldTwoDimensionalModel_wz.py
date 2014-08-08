@@ -21,18 +21,31 @@ class HagiwaraAndZeppenfeldTwoDimensionalModel_wz(AnomalousCouplingModel):
         self.anomCoupSearchWindows = {'dkg':['-0.006','0.006'],
                                       'dg1':['-0.006','0.006'],
                                       'lZ' :['-0.006','0.006']     }
+#        self.anomCoupSearchWindows = {'dkg':['-0.015','0.015'],
+#                                      'dg1':['-0.015','0.015'],
+#                                      'lZ' :['-0.015','0.015']     }
         
         self.verbose = False
 
     def buildScaling(self,process,channel,lepchannel):        
         scalerName = '%s_%s_%s'%(process,channel,lepchannel)
-        filename = '%s/signal_WV_%s.root'%(basepath,lepchannel)  
+
+        print 'reading %s/signal_WV_%s.root for %s'%(basepath,lepchannel,lepchannel)
+        filename = '%s/signal_WV_%s.root'%(basepath,lepchannel)
+
 
               
 #        f = r.TFile('%s/mu_boosted.root'%basepath,'READ')
+#        print '\t\t *********************** Hagiwara reading: %s/%s_boosted.root'%(basepath,lepchannel)
+#        print '\t\t *********************** Hagiwara reading: %s/signal_WV_%s_f4g_ifLessThen1SetTo1_2604Files_SMaTGCfit.root'%(basepath,lepchannel)
         f = r.TFile('%s/%s_boosted.root'%(basepath,lepchannel),'READ')
 #        SM_diboson_shape = f.Get('diboson').Clone('SM_wv_semil_mu_shape_for_scale')
-        SM_diboson_shape = f.Get('zz2l2nu').Clone('SM_wv_semil_%s_shape_for_scale'%lepchannel)
+        if ('ch' in lepchannel):
+            print 'reading Atgc_signal for %s'%lepchannel
+            SM_diboson_shape = f.Get('atgc_signal').Clone('SM_wv_semil_%s_shape_for_scale'%lepchannel)
+        else:
+            print 'reading diboson %s'%lepchannel
+            SM_diboson_shape = f.Get('diboson').Clone('SM_wv_semil_%s_shape_for_scale'%lepchannel)
         SM_diboson_shape.SetDirectory(0)
         f.Close()
         self.modelBuilder.out._import(SM_diboson_shape)
