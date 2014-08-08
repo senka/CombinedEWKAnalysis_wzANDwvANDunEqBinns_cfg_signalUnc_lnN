@@ -157,7 +157,6 @@ void splitSignal_SMaTGC(TString inputFile){
     else if (signal_syst) { // if this is signal syst then save this and create aTGC syst plot with the same relative error 
       cout << "\t -> reading signal unc"<< endl;
       TH1D* plot_unc=(TH1D*)(file_in->Get(histo_name)->Clone("name_histo_atgc2"));
-      cout <<"\treading signal unc histo " << endl;
       int N_bins=plot_unc->GetNbinsX();
       
       TString name_origi_syst=histo_name;
