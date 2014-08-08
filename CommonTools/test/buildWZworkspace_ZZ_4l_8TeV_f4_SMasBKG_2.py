@@ -438,7 +438,7 @@ for section in fit_sections:
                                         lz,                                 
                                         dg1,
                                         dibosonPdf,
-                                        '%s/signal_WV_%s_f4_ifLessThen0SetTo0_2604Files_SMaTGCfit.root'%(basepath,codename),
+                                        '%s/signal_WV_%s.root'%(basepath,codename),
                                         limtype
                                         )
 
@@ -457,7 +457,7 @@ for section in fit_sections:
                                                    lz,                                 
                                                    dg1,
                                                    dibosonPdf_up[i],
-                                                   '%s/signal_WV_%s_f4_ifLessThen0SetTo0_2604Files_SMaTGCfit.root'%(basepath,codename),
+                                                   '%s/signal_WV_%s.root'%(basepath,codename),
                                                    limtype
                                                    )
             aTGCPdf_down[i] = RooATGCSemiAnalyticPdf_wz('ATGCPdf_WWgammaZ_WV_atgc_semileptonic_%s_%sDown'%(codename,name_forCorr),
@@ -467,7 +467,7 @@ for section in fit_sections:
                                                      lz,                                 
                                                      dg1,
                                                      dibosonPdf_down[i],
-                                                     '%s/signal_WV_%s_f4_ifLessThen0SetTo0_2604Files_SMaTGCfit.root'%(basepath,codename),
+                                                     '%s/signal_WV_%s.root'%(basepath,codename),
                                                      limtype
                                                      )
     

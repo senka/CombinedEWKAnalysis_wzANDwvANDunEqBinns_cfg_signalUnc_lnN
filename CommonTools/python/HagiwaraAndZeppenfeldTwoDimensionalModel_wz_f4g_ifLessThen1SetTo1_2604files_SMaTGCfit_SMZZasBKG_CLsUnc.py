@@ -30,15 +30,9 @@ class HagiwaraAndZeppenfeldTwoDimensionalModel_wz_f4g_ifLessThen1SetTo1_2604file
     def buildScaling(self,process,channel,lepchannel):        
         scalerName = '%s_%s_%s'%(process,channel,lepchannel)
 
-        if ('ch' in lepchannel):
-            print 'reading %s/signal_WV_%s_f4g_ifLessThen1SetTo1_2604Files_SMaTGCfit.root for %s'%(basepath,lepchannel,lepchannel)
-            filename = '%s/signal_WV_%s_f4g_ifLessThen1SetTo1_2604Files_SMaTGCfit.root'%(basepath,lepchannel)
-        else:
-            print 'reading %s/signal_WV_%s_f4g_ifLessThen0SetTo0_2604Files_SMaTGCfit.root for %s'%(basepath,lepchannel,lepchannel)
-            filename = '%s/signal_WV_%s_f4g_ifLessThen0SetTo0_2604Files_SMaTGCfit.root'%(basepath,lepchannel)
+        print 'reading %s/signal_WV_%s.root for %s'%(basepath,lepchannel,lepchannel)
+        filename = '%s/signal_WV_%s.root'%(basepath,lepchannel)
 
-        print '\t\t *********************** Hagiwara reading: %s/signal_WV_%s_f4g_ifLessThen1SetTo1_2604Files_SMaTGCfit.root'%(basepath,lepchannel)  
-#        filename = '%s/signal_WV_%s_f4g_ifLessThen1SetTo1_2604Files_SMaTGCfit.root'%(basepath,lepchannel)  
 
               
 #        f = r.TFile('%s/mu_boosted.root'%basepath,'READ')
