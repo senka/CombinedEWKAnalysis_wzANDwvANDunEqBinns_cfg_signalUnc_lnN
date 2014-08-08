@@ -44,10 +44,7 @@ void splitSignal_SMaTGC(TString inputFile){
     TObjArray *strL = errNames.Tokenize(",");
 
    for (int k=0;k<strL->GetLast()+1;k++){
-    cout <<"\n "<<strL->GetLast()<<"\t"  <<k << endl;
-    cout <<"\n"<<((TObjString *)strL->At(k))->GetString() << endl;
     TString histo=((TObjString *)strL->At(k))->GetString();
-    cout <<"\n"<<((TObjString *)strL->At(k))->GetString()<<" = "<< histo << endl;
     histos_updown_v.push_back(histo);
   }
   delete strL;
@@ -69,7 +66,7 @@ void splitSignal_SMaTGC(TString inputFile){
 
   TFile * file_in=new TFile(file_name,"read");
   file_in->cd();
-  file_in->ls();
+  //  file_in->ls();
 
 
   TList * list_histos=file_in->GetListOfKeys();
@@ -131,14 +128,12 @@ void splitSignal_SMaTGC(TString inputFile){
 	// SM:
 	TH1D * plot_SM_up=(TH1D*)(plot_diboson->Clone("name_histo_atgcX"));
 	for (int j=1;j<=N_bins;j++){
-	  cout << "corr: "<<histo_corr->GetBinContent(j)<<" +- "<< histo_corr->GetBinError(j)<<" -> set yield: "<<plot_SM_up->GetBinContent(j)<<" -> "<<plot_SM_up->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)) << endl;
 	  plot_SM_up->SetBinContent(j,plot_SM_up->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)));
 	}
 	plot_SM_up->Write("CMS_hzz2l2v_ewkUp");
 
 	TH1D * plot_SM_down=(TH1D*)(plot_diboson->Clone("name_histo_atgcX"));
 	for (int j=1;j<=N_bins;j++){
-	  cout << "corr: "<<histo_corr->GetBinContent(j)<<" +- "<< histo_corr->GetBinError(j)<<" -> set yield: "<<plot_SM_down->GetBinContent(j)<<" -> "<<plot_SM_down->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)) << endl;
 	  plot_SM_down->SetBinContent(j,plot_SM_down->GetBinContent(j)*(1.-histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)));
 	}
 	plot_SM_down->Write("CMS_hzz2l2v_ewkDown");
@@ -146,14 +141,12 @@ void splitSignal_SMaTGC(TString inputFile){
 	// aTGC:
 	TH1D * plot_aTGC_up=(TH1D*)(plot_aTGC->Clone("name_histo_atgcX"));
 	for (int j=1;j<=N_bins;j++){
-	  cout <<j << " corr: "<<histo_corr->GetBinContent(j)<<" +- "<< histo_corr->GetBinError(j)<<" -> set yield: "<<plot_aTGC_up->GetBinContent(j)<<" -> "<<plot_aTGC_up->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)) << endl;
 	  plot_aTGC_up->SetBinContent(j,plot_aTGC_up->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)));
 	}
 	plot_aTGC_up->Write("diboson_corrUp");
 
 	TH1D * plot_aTGC_down=(TH1D*)(plot_aTGC->Clone("name_histo_atgcX2"));
 	for (int j=1;j<=N_bins;j++){
-	  cout <<j << " corr: "<<histo_corr->GetBinContent(j)<<" +- "<< histo_corr->GetBinError(j)<<" -> set yield: "<<plot_aTGC_down->GetBinContent(j)<<" -> "<<plot_aTGC_down->GetBinContent(j)*(1.+histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)) << endl;
 	  plot_aTGC_down->SetBinContent(j,plot_aTGC_down->GetBinContent(j)*(1.-histo_corr->GetBinError(j)/histo_corr->GetBinContent(j)));
 	}
 	plot_aTGC_down->Write("diboson_corrDown");
@@ -190,12 +183,8 @@ void splitSignal_SMaTGC(TString inputFile){
       cout << " -> saving as: "<< name_atgc_syst<< endl;
     }     
     else{ // simply save histo
-      cout << "\t\t -> reading other"<< endl;
       TH1D * plot=(TH1D*)(file_in->Get(histo_name)->Clone("name_histo_atgc4"));
-      cout <<"\treading histo \""<< histo_name<< "\" and rebinning.." << endl;
       int N_bins=plot->GetNbinsX();
-
-      
       plot->Write(histo_name);
     }
 
@@ -205,7 +194,7 @@ void splitSignal_SMaTGC(TString inputFile){
   
   TFile * file_in_signal=new TFile(signal_file_name,"read");
   file_in_signal->cd();
-  file_in_signal->ls();
+  //  file_in_signal->ls();
 
   TList * list_histos_signal=file_in_signal->GetListOfKeys();
   TString file_out_signal=signal_file_name;
