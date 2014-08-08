@@ -1,0 +1,225 @@
+void makeAdjust_jveto_ch1(){
+
+
+  TFile * file_in=new TFile("../data/WV_semileptonic/ch1_boosted_allBins.root","read");
+  TFile * file_in=new TFile("../data/WV_semileptonic/ch1_boosted_allBins.root","read");
+  file_in->cd();
+  
+  TH1D * zz2l2nu_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_eff_bUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_lesUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_puUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_umetUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_res_jUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_scale_jUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_ewkUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_eff_bDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_lesDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_puDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_umetDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_res_jDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_scale_jDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_ewkDown_tmp=new TH1D();
+  TH1D * wz3lnu_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_eff_bUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_lesUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_puUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_umetUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_res_jUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_scale_jUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_ewkUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_eff_bDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_lesDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_puDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_umetDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_res_jDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_scale_jDown_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_ewkDown_tmp=new TH1D();
+  TH1D * zll_tmp=new TH1D();
+  TH1D * zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp=new TH1D();
+  TH1D * zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp=new TH1D();
+  TH1D * topwwwjetsdata_tmp=new TH1D();
+  TH1D * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp=new TH1D();
+  TH1D * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp=new TH1D();
+  TH1D * data_obs_tmp=new TH1D();
+
+  /*
+  TH1D * data_obs_tmp=new TH1D();
+  TH1D * zll_tmp=new TH1D();
+  TH1D * zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp=new TH1D();
+  TH1D * zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp=new TH1D();
+  TH1D * topwwwjetsdata_tmp=new TH1D();
+  TH1D * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp=new TH1D();
+  TH1D * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp=new TH1D();
+  TH1D * wz3lnu_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp=new TH1D();
+  TH1D * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp=new TH1D();
+  TH1D * zz2l2nu_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp=new TH1D();
+  TH1D * zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp=new TH1D();
+  */
+
+  zz2l2nu_tmp=(TH1D*)(zz2l2nu->Clone("zz2l2nu"));
+  zz2l2nu_CMS_eff_bUp_tmp=(TH1D*)(zz2l2nu_CMS_eff_bUp->Clone("zz2l2nu_CMS_eff_bUp"));
+  zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->Clone("zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp"));
+  zz2l2nu_CMS_hzz2l2v_lesUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_lesUp->Clone("zz2l2nu_CMS_hzz2l2v_lesUp"));
+  zz2l2nu_CMS_hzz2l2v_puUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_puUp->Clone("zz2l2nu_CMS_hzz2l2v_puUp"));
+  zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp->Clone("zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp"));
+  zz2l2nu_CMS_hzz2l2v_umetUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_umetUp->Clone("zz2l2nu_CMS_hzz2l2v_umetUp"));
+  zz2l2nu_CMS_res_jUp_tmp=(TH1D*)(zz2l2nu_CMS_res_jUp->Clone("zz2l2nu_CMS_res_jUp"));
+  zz2l2nu_CMS_scale_jUp_tmp=(TH1D*)(zz2l2nu_CMS_scale_jUp->Clone("zz2l2nu_CMS_scale_jUp"));
+  zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_sherpaUp->Clone("zz2l2nu_CMS_hzz2l2v_sherpaUp"));
+  zz2l2nu_CMS_hzz2l2v_ewkUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_ewkUp->Clone("zz2l2nu_CMS_hzz2l2v_ewkUp"));
+  zz2l2nu_CMS_eff_bDown_tmp=(TH1D*)(zz2l2nu_CMS_eff_bDown->Clone("zz2l2nu_CMS_eff_bDown"));
+  zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->Clone("zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown"));
+  zz2l2nu_CMS_hzz2l2v_lesDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_lesDown->Clone("zz2l2nu_CMS_hzz2l2v_lesDown"));
+  zz2l2nu_CMS_hzz2l2v_puDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_puDown->Clone("zz2l2nu_CMS_hzz2l2v_puDown"));
+  zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown->Clone("zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown"));
+  zz2l2nu_CMS_hzz2l2v_umetDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_umetDown->Clone("zz2l2nu_CMS_hzz2l2v_umetDown"));
+  zz2l2nu_CMS_res_jDown_tmp=(TH1D*)(zz2l2nu_CMS_res_jDown->Clone("zz2l2nu_CMS_res_jDown"));
+  zz2l2nu_CMS_scale_jDown_tmp=(TH1D*)(zz2l2nu_CMS_scale_jDown->Clone("zz2l2nu_CMS_scale_jDown"));
+  zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_sherpaDown->Clone("zz2l2nu_CMS_hzz2l2v_sherpaDown"));
+  zz2l2nu_CMS_hzz2l2v_ewkDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_ewkDown->Clone("zz2l2nu_CMS_hzz2l2v_ewkDown"));
+  wz3lnu_tmp=(TH1D*)(wz3lnu->Clone("wz3lnu"));
+  wz3lnu_CMS_eff_bUp_tmp=(TH1D*)(wz3lnu_CMS_eff_bUp->Clone("wz3lnu_CMS_eff_bUp"));
+  wz3lnu_CMS_hzz2l2v_lesUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_lesUp->Clone("wz3lnu_CMS_hzz2l2v_lesUp"));
+  wz3lnu_CMS_hzz2l2v_puUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_puUp->Clone("wz3lnu_CMS_hzz2l2v_puUp"));
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp->Clone("wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp"));
+  wz3lnu_CMS_hzz2l2v_umetUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_umetUp->Clone("wz3lnu_CMS_hzz2l2v_umetUp"));
+  wz3lnu_CMS_res_jUp_tmp=(TH1D*)(wz3lnu_CMS_res_jUp->Clone("wz3lnu_CMS_res_jUp"));
+  wz3lnu_CMS_scale_jUp_tmp=(TH1D*)(wz3lnu_CMS_scale_jUp->Clone("wz3lnu_CMS_scale_jUp"));
+  wz3lnu_CMS_hzz2l2v_ewkUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_ewkUp->Clone("wz3lnu_CMS_hzz2l2v_ewkUp"));
+  wz3lnu_CMS_eff_bDown_tmp=(TH1D*)(wz3lnu_CMS_eff_bDown->Clone("wz3lnu_CMS_eff_bDown"));
+  wz3lnu_CMS_hzz2l2v_lesDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_lesDown->Clone("wz3lnu_CMS_hzz2l2v_lesDown"));
+  wz3lnu_CMS_hzz2l2v_puDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_puDown->Clone("wz3lnu_CMS_hzz2l2v_puDown"));
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown->Clone("wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown"));
+  wz3lnu_CMS_hzz2l2v_umetDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_umetDown->Clone("wz3lnu_CMS_hzz2l2v_umetDown"));
+  wz3lnu_CMS_res_jDown_tmp=(TH1D*)(wz3lnu_CMS_res_jDown->Clone("wz3lnu_CMS_res_jDown"));
+  wz3lnu_CMS_scale_jDown_tmp=(TH1D*)(wz3lnu_CMS_scale_jDown->Clone("wz3lnu_CMS_scale_jDown"));
+  wz3lnu_CMS_hzz2l2v_ewkDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_ewkDown->Clone("wz3lnu_CMS_hzz2l2v_ewkDown"));
+  zll_tmp=(TH1D*)(zll->Clone("zll"));
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp=(TH1D*)(zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp->Clone("zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp"));
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp=(TH1D*)(zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown->Clone("zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown"));
+  topwwwjetsdata_tmp=(TH1D*)(topwwwjetsdata->Clone("topwwwjetsdata"));
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp=(TH1D*)(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp->Clone("topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp"));
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp=(TH1D*)(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown->Clone("topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown"));
+  data_obs_tmp=(TH1D*)(data_obs->Clone("data_obs"));
+
+
+  /*
+  data_obs_tmp=(TH1D*)(data_obs->Clone("data_obs"));
+  zll_tmp=(TH1D*)(zll->Clone("zll"));
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp=(TH1D*)(zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp->Clone("zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp"));
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp=(TH1D*)(zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown->Clone("zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown"));
+  topwwwjetsdata_tmp=(TH1D*)(topwwwjetsdata->Clone("topwwwjetsdata"));
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp=(TH1D*)(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp->Clone("topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp"));
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp=(TH1D*)(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown->Clone("topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown"));
+  wz3lnu_tmp=(TH1D*)(wz3lnu->Clone("wz3lnu"));
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp->Clone("wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp"));
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp=(TH1D*)(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown->Clone("wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown"));
+  zz2l2nu_tmp=(TH1D*)(zz2l2nu->Clone("zz2l2nu"));
+  zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_sherpaUp->Clone("zz2l2nu_CMS_hzz2l2v_sherpaUp"));
+  zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp=(TH1D*)(zz2l2nu_CMS_hzz2l2v_sherpaDown->Clone("zz2l2nu_CMS_hzz2l2v_sherpaDown"));
+  */
+
+
+  TFile * file_out=new TFile("../data/WV_semileptonic/ch1_boosted_allBins_jetVetoToDown001timesExp.root","recreate");
+  //  TFile * file_out=new TFile("../data/WV_semileptonic/ch6_boosted_BKGzllzeroSystDown.root","recreate");
+  file_out->cd();
+
+  zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown_tmp->SetBinContent(1,zz2l2nu_tmp->GetBinContent(1)*0.001);
+
+  zz2l2nu_tmp->Write();
+  zz2l2nu_CMS_eff_bUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_lesUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_puUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_umetUp_tmp->Write();
+  zz2l2nu_CMS_res_jUp_tmp->Write();
+  zz2l2nu_CMS_scale_jUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_ewkUp_tmp->Write();
+  zz2l2nu_CMS_eff_bDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_lesDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_puDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_umetDown_tmp->Write();
+  zz2l2nu_CMS_res_jDown_tmp->Write();
+  zz2l2nu_CMS_scale_jDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_ewkDown_tmp->Write();
+  wz3lnu_tmp->Write();
+  wz3lnu_CMS_eff_bUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_lesUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_puUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_umetUp_tmp->Write();
+  wz3lnu_CMS_res_jUp_tmp->Write();
+  wz3lnu_CMS_scale_jUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_ewkUp_tmp->Write();
+  wz3lnu_CMS_eff_bDown_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_lesDown_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_puDown_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_umetDown_tmp->Write();
+  wz3lnu_CMS_res_jDown_tmp->Write();
+  wz3lnu_CMS_scale_jDown_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_ewkDown_tmp->Write();
+  zll_tmp->Write();
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp->Write();
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp->Write();
+  topwwwjetsdata_tmp->Write();
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp->Write();
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp->Write();
+  data_obs_tmp->Write();
+
+  /*
+  data_obs_tmp->Write();
+  zll_tmp->Write();
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp->Write();
+
+  //  zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp->SetBinContent(1,0.);
+  zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp->Write();
+  topwwwjetsdata_tmp->Write();
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp->Write();
+  topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp->Write();
+  wz3lnu_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp->Write();
+  wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp->Write();
+  zz2l2nu_tmp->Write();
+  zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp->Write();
+
+  //  zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp->SetBinContent(1,-0.1);
+  zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp->Write();
+
+  cout 
+    << "zzll: "<<zll_tmp->Integral()<<"\t"<<zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp_tmp-> Integral()/(zll_tmp->Integral()) <<" / "<<zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown_tmp-> Integral()/(zll_tmp->Integral())
+    << "\ntopwwwjetsdata: "<<topwwwjetsdata_tmp->Integral()<<"\t"<<topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp_tmp-> Integral()/(topwwwjetsdata_tmp->Integral()) <<" / "<<topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown_tmp-> Integral()/(topwwwjetsdata_tmp->Integral())
+    << "\nwz3lnu: "<<wz3lnu_tmp->Integral()<<"\t"<<wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp_tmp-> Integral()/(wz3lnu_tmp->Integral()) <<" / "<<wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown_tmp-> Integral()/(wz3lnu_tmp->Integral())
+
+    << "\nzz2l2nu: "<<zz2l2nu_tmp->Integral()<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp_tmp-> Integral()/(zz2l2nu_tmp->Integral()) <<" / "<<zz2l2nu_CMS_hzz2l2v_sherpaDown_tmp-> Integral()/(zz2l2nu_tmp->Integral())
+
+       <<endl;
+  */
+
+
+/*
+bkg1_name=zll
+bkg1_shape_syst=zll_CMS_hzz2l2v_stat_ll_zll_8TeV
+bkg2_name=topwwwjetsdata
+bkg2_shape_syst=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV
+bkg3_name=wz3lnu
+bkg3_shape_syst=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV
+signal_shape_syst=zz2l2nu_CMS_hzz2l2v_sherpa
+*/
+}

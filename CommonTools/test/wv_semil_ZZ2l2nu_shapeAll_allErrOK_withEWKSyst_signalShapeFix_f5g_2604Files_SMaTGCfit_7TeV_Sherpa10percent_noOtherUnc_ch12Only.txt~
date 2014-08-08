@@ -1,0 +1,20 @@
+Combination of wv_semil_ch7boosted.txt  wv_semil_ch8boosted.txt  wv_semil_ch9boosted.txt  wv_semil_ch10boosted.txt  wv_semil_ch11boosted.txt  wv_semil_ch12boosted.txt
+imax 1 number of bins
+jmax 3 number of processes minus 1
+kmax * number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes WV_semileptonic_bkg1_ch12           ch6                                 ./ch12_boosted_ws.root WV_ch12boosted:$PROCESS
+shapes WV_semileptonic_bkg2_ch12           ch6                                 ./ch12_boosted_ws.root WV_ch12boosted:$PROCESS
+shapes WV_semileptonic_bkg3_ch12           ch6                                 ./ch12_boosted_ws.root WV_ch12boosted:$PROCESS
+shapes WWgammaZ_WV_atgc_semileptonic_ch12  ch6                                 ./ch12_boosted_ws.root WV_ch12boosted:ATGCPdf_$PROCESS WV_ch12boosted:ATGCPdf_$PROCESS_$SYSTEMATIC
+shapes data_obs                            ch6                                 ./ch12_boosted_ws.root WV_ch12boosted:$PROCESS
+----------------------------------------------------------------------------------------------------------------------------------
+bin                 ch6        
+observation          1e-05      
+----------------------------------------------------------------------------------------------------------------------------------
+bin                                                                          ch6                                 ch6                                 ch6                                 ch6                               
+process                                                                      WWgammaZ_WV_atgc_semileptonic_ch12  WV_semileptonic_bkg3_ch12           WV_semileptonic_bkg2_ch12           WV_semileptonic_bkg1_ch12         
+process                                                                      0                                   16                                  17                                  18                                
+rate                0.0493                              0.0065                              1e-05                               1e-05                             
+----------------------------------------------------------------------------------------------------------------------------------
+Sherpa                  lnN                                                   -                                   0.9/1.1                         -                                   -                                   -                                 

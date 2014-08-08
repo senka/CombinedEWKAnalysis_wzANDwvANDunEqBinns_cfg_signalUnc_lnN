@@ -1,0 +1,38 @@
+
+# Simple counting experiment, with one signal and a few background processes 
+imax 1  number of channels
+jmax 3  number of backgrounds
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------
+shapes WV_semileptonic_bkg1_ch6  ch6boosted ./ch6_boosted_ws.root WV_ch6boosted:$PROCESS WV_ch6boosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg2_ch6  ch6boosted ./ch6_boosted_ws.root WV_ch6boosted:$PROCESS WV_ch6boosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg3_ch6  ch6boosted ./ch6_boosted_ws.root WV_ch6boosted:$PROCESS WV_ch6boosted:$PROCESS_$SYSTEMATIC
+shapes data_obs                ch6boosted ./ch6_boosted_ws.root WV_ch6boosted:$PROCESS    
+shapes WWgammaZ_WV_atgc_semileptonic_ch6 ch6boosted ./ch6_boosted_ws.root WV_ch6boosted:ATGCPdf_$PROCESS WV_ch6boosted:ATGCPdf_$PROCESS_$SYSTEMATIC    
+------------
+bin ch6boosted 
+observation 1e-05
+------------
+bin                         ch6boosted					ch6boosted			ch6boosted			ch6boosted       
+process			    WWgammaZ_WV_atgc_semileptonic_ch6    	WV_semileptonic_bkg1_ch6	WV_semileptonic_bkg2_ch6	WV_semileptonic_bkg3_ch6       
+process                     0	  	       				1 				2 				3       
+rate                        0.153070598841	 			2.49453663826 			1e-05 			0.163198038936           
+------------
+lumi_8TeV       	    lnN 	    1.026             				-				-				1.026       
+CMS_eff_c           lnN     1.03          				-				-				1.03       
+CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c       lnN     -               				-				1.2				-
+zll_CMS_hzz2l2v_stat_ll_zll_8TeV shapeN  -				1.0 				-				-
+topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV shapeN  -				-				1.0 				-
+wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV shapeN  -				-				-				1.0 
+Zlldata_syst           lnN     -          				1.4				-				-
+pdf_VV           lnN     1.058          				-				-				1.042
+CMS_eff_b        shapeN  1.0          				-				-				1.0
+CMS_hzz2l2v_QCD_ACC_JVeto        shapeN  1.0          				-				-				1.0
+CMS_hzz2l2v_les        shapeN  1.0          				-				-				1.0
+CMS_hzz2l2v_pu        shapeN  1.0          				-				-				1.0
+zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV        shapeN  1.0          				-				-				-
+CMS_hzz2l2v_umet        shapeN  1.0          				-				-				1.0
+CMS_res_j        shapeN  1.0          				-				-				1.0
+CMS_scale_j        shapeN  1.0          				-				-				1.0
+zz2l2nu_CMS_hzz2l2v_sherpa        shapeN  1.0          				-				-				-
+CMS_hzz2l2v_ewk        shapeN  1.0          				-				-				1.0

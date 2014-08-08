@@ -1,0 +1,25 @@
+
+# Simple counting experiment, with one signal and a few background processes 
+imax 1  number of channels
+jmax 1  number of backgrounds
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------
+shapes WV_semileptonic_bkg_mu_ZZ_4l_8TeV  mu_ZZ_4l_8TeVboosted ./mu_ZZ_4l_8TeV_boosted_ws.root WV_mu_ZZ_4l_8TeVboosted:$PROCESS WV_mu_ZZ_4l_8TeVboosted:$PROCESS_$SYSTEMATIC
+shapes data_obs                mu_ZZ_4l_8TeVboosted ./mu_ZZ_4l_8TeV_boosted_ws.root WV_mu_ZZ_4l_8TeVboosted:$PROCESS    
+shapes WWgammaZ_WV_atgc_semileptonic_mu_ZZ_4l_8TeV mu_ZZ_4l_8TeVboosted ./mu_ZZ_4l_8TeV_boosted_ws.root WV_mu_ZZ_4l_8TeVboosted:ATGCPdf_$PROCESS WV_mu_ZZ_4l_8TeVboosted:ATGCPdf_$PROCESS_$SYSTEMATIC    
+------------
+bin mu_ZZ_4l_8TeVboosted 
+observation 75.0
+------------
+bin                         mu_ZZ_4l_8TeVboosted		      mu_ZZ_4l_8TeVboosted
+process                     WWgammaZ_WV_atgc_semileptonic_mu_ZZ_4l_8TeV   WV_semileptonic_bkg_mu_ZZ_4l_8TeV
+process                     0			      1		
+rate                        77.320961833		      1.18578081904	
+    
+------------
+lumi_8TeV           lnN     1.022		      -
+pdf_VV        lnN  1.04                       -
+CMS_eff_c        lnN  1.03                       -
+background_muboosted_backshape shape1  -                         1.0 
+CMS_hzz2l2v_QCD_ACC_JVeto        shape1  1.0                       -
+ZZ_4l_other        shape1  1.0                       -

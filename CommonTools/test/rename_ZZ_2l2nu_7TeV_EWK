@@ -1,0 +1,6 @@
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch1_uniformBins_binBYbin.root ../data/WV_semileptonic/ch7_boosted.root
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch2_uniformBins_binBYbin.root ../data/WV_semileptonic/ch8_boosted.root
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch3_uniformBins_binBYbin.root ../data/WV_semileptonic/ch9_boosted.root
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch4_uniformBins_binBYbin.root ../data/WV_semileptonic/ch10_boosted.root
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch5_uniformBins_binBYbin.root ../data/WV_semileptonic/ch11_boosted.root
+cp ../data/WV_semileptonic/output_1sigma_withSherpaSyst_2604Files_EWK_7TeV_withEWKcorrUnc_ch6_uniformBins_binBYbin.root ../data/WV_semileptonic/ch12_boosted.root

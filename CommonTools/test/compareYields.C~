@@ -1,0 +1,12 @@
+void compareYields(){
+
+  TFile * ch1_file=new TFile("../data/WV_semileptonic/ch1_boosted.root","read");
+
+  ch1_file->cd();
+  double yield_1=zz2l2nu->GetBinContent(1);
+  double syst_1_up=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(1);
+  double syst_1_down=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(1);
+  
+
+
+}

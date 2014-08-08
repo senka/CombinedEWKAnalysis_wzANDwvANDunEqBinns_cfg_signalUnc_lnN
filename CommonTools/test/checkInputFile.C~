@@ -1,0 +1,47 @@
+void checkInputFile(){
+
+
+  TFile * file=new TFile("/afs/cern.ch/user/l/lpernie/public/4Senka/EWKSys_2013-08-01_ptDependentErrors_7TeVAll/limits/f4z/cardsShape/0.01/hzz2l2v_f4z_P0p01_7TeV.root","read");
+  file->cd();
+  ll->cd();
+    cout << endl;
+  cout << "ch7 bkg1: "<<zlldata->GetBinContent(3) << endl;
+  cout << "ch7 bkg2: "<<topwwwjetsdata->GetBinContent(3) << endl;
+  cout << "ch7 bkg3: "<<wz3lnu->GetBinContent(3) << endl;
+  cout << "ch7 signal: " << zz2l2nu->GetBinContent(3) << endl;
+  cout << "ch7 signal+atgc: " << zz2l2nu->GetBinContent(3)+ zz2l2nu_f4z_p0p01->GetBinContent(3)<< endl;
+    cout << endl;
+  cout << "ch11 bkg1: "<<zlldata->GetBinContent(7) << endl;
+  cout << "ch11 bkg2: "<<topwwwjetsdata->GetBinContent(7) << endl;
+  cout << "ch11 bkg3: "<<wz3lnu->GetBinContent(7) << endl;
+  cout << "ch11 signal: " << zz2l2nu->GetBinContent(7) << endl;
+  cout << "ch11 signal+atgc: " << zz2l2nu->GetBinContent(7)+ zz2l2nu_f4z_p0p01->GetBinContent(7)<< endl;
+    cout << endl;
+  cout << "ch12 bkg1: "<<zlldata->GetBinContent(8) << endl;
+  cout << "ch12 bkg2: "<<topwwwjetsdata->GetBinContent(8) << endl;
+  cout << "ch12 bkg3: "<<wz3lnu->GetBinContent(8) << endl;
+  cout << "ch12 signal: " << zz2l2nu->GetBinContent(8) << endl;
+  cout << "ch12 signal+atgc: " << zz2l2nu->GetBinContent(8)+ zz2l2nu_f4z_p0p01->GetBinContent(8)<< endl;
+  cout << endl;
+  
+  cout <<"signal: QCD " << endl;
+  cout << "ch7 signal: " << zz2l2nu->GetBinContent(3)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(3) <<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(3)  << endl;
+  cout << "ch8 signal: " << zz2l2nu->GetBinContent(4)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(4)<<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(4)  << endl;
+  cout << "ch9 signal: " << zz2l2nu->GetBinContent(5)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(5)<<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(5)  << endl;
+  cout << "ch10 signal: " << zz2l2nu->GetBinContent(6)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(6)<<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(6)  << endl;
+  cout << "ch11 signal: " << zz2l2nu->GetBinContent(7)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(7)<<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(7)  << endl;
+  cout << "ch12 signal: " << zz2l2nu->GetBinContent(8)<<"+"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(8)<<"-"<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(8)  << endl;
+  cout << endl;
+  
+  cout <<"signal: sherpa " << endl;
+  cout << "ch7 signal: " << zz2l2nu->GetBinContent(3)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(3)/zz2l2nu->GetBinContent(3) <<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(3)/zz2l2nu->GetBinContent(3)  << endl;
+  cout << "ch8 signal: " << zz2l2nu->GetBinContent(4)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(4)/zz2l2nu->GetBinContent(4)<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(4)/zz2l2nu->GetBinContent(4)  << endl;
+  cout << "ch9 signal: " << zz2l2nu->GetBinContent(5)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(5)/zz2l2nu->GetBinContent(5)<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(5)/zz2l2nu->GetBinContent(5)  << endl;
+  cout << "ch10 signal: " << zz2l2nu->GetBinContent(6)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(6)/zz2l2nu->GetBinContent(6)<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(6)/zz2l2nu->GetBinContent(6)  << endl;
+  cout << "ch11 signal: " << zz2l2nu->GetBinContent(7)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(7)/zz2l2nu->GetBinContent(7)<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(7)/zz2l2nu->GetBinContent(7)  << endl;
+  cout << "ch12 signal: " << zz2l2nu->GetBinContent(8)<<"\t\t"<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(8)/zz2l2nu->GetBinContent(8)<<"\t"<<zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(8)/zz2l2nu->GetBinContent(8)  << endl;
+  cout << endl;
+  cout <<"ch12 QCD: "<< zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown->GetBinContent(8)/zz2l2nu->GetBinContent(8)<<" / "<<zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp->GetBinContent(8)/zz2l2nu->GetBinContent(8) << endl;
+  cout <<"ch12 sherpa: "<< zz2l2nu_CMS_hzz2l2v_sherpaDown->GetBinContent(8)/zz2l2nu->GetBinContent(8)<<" / "<<zz2l2nu_CMS_hzz2l2v_sherpaUp->GetBinContent(8)/zz2l2nu->GetBinContent(8) << endl;
+
+}

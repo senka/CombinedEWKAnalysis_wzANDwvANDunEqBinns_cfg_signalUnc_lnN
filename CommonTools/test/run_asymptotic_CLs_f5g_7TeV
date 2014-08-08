@@ -1,0 +1,60 @@
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.007,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.007
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.008,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.008
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.009,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.009
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.01,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.01
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.012,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.012
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.014,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.014
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.016,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.016
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.018,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.018
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=-0.02,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_-0.020
+
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.007,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.007
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.008,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.008
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.009,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.009
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.01,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.01
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.012,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.012
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.014,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.014
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.016,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.016
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.018,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.018
+combine -M Asymptotic Example_ZZ2l2nu_f5g_2604Files_SMaTGCfit_7TeV_allUnc_CLsUnc_SMZZasBKG.root --setPhysicsModelParameters lZ=0.,dkg=0.02,dg1=0. --freezeNuisances lZ,dkg,dg1 --redefineSignalPOIs r -n _senkaCLsUnc_dkg_0.020
+
+
+mkdir limits_f5g_7TeV_EWK
+mkdir limits_f5g_7TeV_EWK/-0.007
+mv higgsCombine_senkaCLsUnc_dkg_-0.007.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.007/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.008
+mv higgsCombine_senkaCLsUnc_dkg_-0.008.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.008/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.009
+mv higgsCombine_senkaCLsUnc_dkg_-0.009.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.009/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.01
+mv higgsCombine_senkaCLsUnc_dkg_-0.01.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.01/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.012
+mv higgsCombine_senkaCLsUnc_dkg_-0.012.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.012/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.014
+mv higgsCombine_senkaCLsUnc_dkg_-0.014.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.014/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.016
+mv higgsCombine_senkaCLsUnc_dkg_-0.016.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.016/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.018
+mv higgsCombine_senkaCLsUnc_dkg_-0.018.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.018/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/-0.02
+mv higgsCombine_senkaCLsUnc_dkg_-0.020.Asymptotic.mH120.root limits_f5g_7TeV_EWK/-0.02/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+
+mkdir limits_f5g_7TeV_EWK/0.007
+mv higgsCombine_senkaCLsUnc_dkg_0.007.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.007/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.008
+mv higgsCombine_senkaCLsUnc_dkg_0.008.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.008/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.009
+mv higgsCombine_senkaCLsUnc_dkg_0.009.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.009/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.01
+mv higgsCombine_senkaCLsUnc_dkg_0.01.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.01/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.012
+mv higgsCombine_senkaCLsUnc_dkg_0.012.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.012/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.014
+mv higgsCombine_senkaCLsUnc_dkg_0.014.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.014/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.016
+mv higgsCombine_senkaCLsUnc_dkg_0.016.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.016/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.018
+mv higgsCombine_senkaCLsUnc_dkg_0.018.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.018/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+mkdir limits_f5g_7TeV_EWK/0.02
+mv higgsCombine_senkaCLsUnc_dkg_0.020.Asymptotic.mH120.root limits_f5g_7TeV_EWK/0.02/higgsCombine_senkaCLsUnc.Asymptotic.mH120.root
+

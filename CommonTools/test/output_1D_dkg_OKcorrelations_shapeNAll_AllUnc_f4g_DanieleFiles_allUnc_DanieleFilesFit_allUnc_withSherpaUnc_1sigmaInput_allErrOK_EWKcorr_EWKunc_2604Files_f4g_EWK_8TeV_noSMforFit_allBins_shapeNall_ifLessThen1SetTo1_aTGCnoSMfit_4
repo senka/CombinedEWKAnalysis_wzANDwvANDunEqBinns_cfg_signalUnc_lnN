@@ -1,0 +1,349 @@
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Adding /afs/cern.ch/work/s/senka/CMSSW_aTGCframe_work/for_ZZ_CMS_combination_developmentUpdated_binBYbin/CMSSW_6_1_1/src to include path
+Adding /cvmfs/cms.cern.ch/slc5_amd64_gcc472/lcg/roofit/5.34.04-cms2//include to include path
+Input workspace 'w': 
+
+RooWorkspace(w) w contents
+
+variables
+---------
+(CMS_channel,CMS_eff_b,CMS_eff_b_In,CMS_eff_c,CMS_eff_c_In,CMS_hzz2l2v_ewk,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet,CMS_hzz2l2v_umet_In,CMS_res_j,CMS_res_j_In,CMS_scale_j,CMS_scale_j_In,QCDscale_VV,QCDscale_VV_In,W_pt_ch1,Zlldata_syst,Zlldata_syst_In,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,lumi_8TeV_In,pdf_VV,pdf_VV_In,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+
+p.d.f.s
+-------
+SimpleGaussianConstraint::CMS_eff_b_Pdf[ x=CMS_eff_b mean=CMS_eff_b_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_eff_c_Pdf[ x=CMS_eff_c mean=CMS_eff_c_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_ewk_Pdf[ x=CMS_hzz2l2v_ewk mean=CMS_hzz2l2v_ewk_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_les_Pdf[ x=CMS_hzz2l2v_les mean=CMS_hzz2l2v_les_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_pu_Pdf[ x=CMS_hzz2l2v_pu mean=CMS_hzz2l2v_pu_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf[ x=CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c mean=CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_umet_Pdf[ x=CMS_hzz2l2v_umet mean=CMS_hzz2l2v_umet_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_res_j_Pdf[ x=CMS_res_j mean=CMS_res_j_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_scale_j_Pdf[ x=CMS_scale_j mean=CMS_scale_j_In sigma=1 ] = 1
+SimpleGaussianConstraint::QCDscale_VV_Pdf[ x=QCDscale_VV mean=QCDscale_VV_In sigma=1 ] = 1
+SimpleGaussianConstraint::Zlldata_syst_Pdf[ x=Zlldata_syst mean=Zlldata_syst_In sigma=1 ] = 1
+SimpleGaussianConstraint::lumi_8TeV_Pdf[ x=lumi_8TeV mean=lumi_8TeV_In sigma=1 ] = 1
+RooSimultaneousOpt::model_b[ indexCat=CMS_channel ch1=pdf_binch1_bonly extraConstraints=() ] = 0.0092276
+RooSimultaneousOpt::model_s[ indexCat=CMS_channel ch1=pdf_binch1 extraConstraints=() ] = 0.0669149
+RooProdPdf::nuisancePdf[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_ewk_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDscale_VV_Pdf * Zlldata_syst_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf ] = 1
+SimpleGaussianConstraint::pdf_VV_Pdf[ x=pdf_VV mean=pdf_VV_In sigma=1 ] = 1
+RooProdPdf::pdf_binch1[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_ewk_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDscale_VV_Pdf * Zlldata_syst_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf * pdf_binch1_nuis ] = 0.0669149
+RooProdPdf::pdf_binch1_bonly[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_ewk_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDscale_VV_Pdf * Zlldata_syst_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf * pdf_binch1_bonly_nuis ] = 0.0092276
+RooAddPdf::pdf_binch1_bonly_nuis[ n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1 * shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1 * shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1 * shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph ] = 0.0092276
+RooAddPdf::pdf_binch1_nuis[ n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1 * shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1 * shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph + n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1 * shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1 * shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph ] = 0.0669149
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph[ coefList=(zll_CMS_hzz2l2v_stat_ll_zll_8TeV) x=W_pt_ch1 ] = 0.0254389
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph[ coefList=(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV) x=W_pt_ch1 ] = 0
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph[ coefList=(CMS_eff_b,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV) x=W_pt_ch1 ] = 0.00149648
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_eff_bDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bDown ] = 0.148291
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_eff_bUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bUp ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_ewkDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_ewkDown ] = 0.13169
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_ewkUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_ewkUp ] = 0.178234
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_lesDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_lesUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_puDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown ] = 0.153013
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_puUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp ] = 0.152162
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_umetDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_umetUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_res_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jDown ] = 0.153071
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_res_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jUp ] = 0.159711
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_scale_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jDown ] = 0.179003
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_scale_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jUp ] = 0.134995
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown ] = 0.0233961
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp ] = 0.282745
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_sherpaDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_sherpaDown ] = 0.240244
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_sherpaUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_sherpaUp ] = 0.0658977
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown ] = 0.123371
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp ] = 0.18277
+VerticalInterpPdf::shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph[ ] = 0.153071
+SimpleGaussianConstraint::topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf[ x=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV mean=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf[ x=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV mean=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf[ x=zll_CMS_hzz2l2v_stat_ll_zll_8TeV mean=zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf[ x=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto mean=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_sherpa_Pdf[ x=zz2l2nu_CMS_hzz2l2v_sherpa mean=zz2l2nu_CMS_hzz2l2v_sherpa_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf[ x=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV mean=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In sigma=1 ] = 1
+
+functions
+--------
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1[ kappaLow=kappaL_1 kappaHigh=kappaH_1 theta=CMS_eff_b ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral10[ kappaLow=kappaL_10 kappaHigh=kappaH_10 theta=CMS_hzz2l2v_ewk ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2[ kappaLow=kappaL_2 kappaHigh=kappaH_2 theta=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3[ kappaLow=kappaL_3 kappaHigh=kappaH_3 theta=CMS_hzz2l2v_les ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral4[ kappaLow=kappaL_4 kappaHigh=kappaH_4 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5[ kappaLow=kappaL_5 kappaHigh=kappaH_5 theta=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6[ kappaLow=kappaL_6 kappaHigh=kappaH_6 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7[ kappaLow=kappaL_7 kappaHigh=kappaH_7 theta=CMS_res_j ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral8[ kappaLow=kappaL_8 kappaHigh=kappaH_8 theta=CMS_scale_j ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral9[ kappaLow=kappaL_9 kappaHigh=kappaH_9 theta=zz2l2nu_CMS_hzz2l2v_sherpa ] = 1
+RooATGCProcessScaling_wz::Scaling_WWgammaZ_WV_atgc_semileptonic_ch1[ lZ=lZ dkg=dkg dg1=dg1 ] = 1.03686
+RooHistFunc::Scaling_base_pdf_WWgammaZ_WV_atgc_semileptonic_ch1[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bDown[ depList=(W_pt_ch1) ] = 0.148291
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bUp[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_ewkDown[ depList=(W_pt_ch1) ] = 0.13169
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_ewkUp[ depList=(W_pt_ch1) ] = 0.178234
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown[ depList=(W_pt_ch1) ] = 0.153013
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp[ depList=(W_pt_ch1) ] = 0.152162
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jDown[ depList=(W_pt_ch1) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jUp[ depList=(W_pt_ch1) ] = 0.159711
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jDown[ depList=(W_pt_ch1) ] = 0.179003
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jUp[ depList=(W_pt_ch1) ] = 0.134995
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ depList=(W_pt_ch1) ] = 0.0233961
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ depList=(W_pt_ch1) ] = 0.282745
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_sherpaDown[ depList=(W_pt_ch1) ] = 0.240244
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_sherpaUp[ depList=(W_pt_ch1) ] = 0.0658977
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ depList=(W_pt_ch1) ] = 0.123371
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ depList=(W_pt_ch1) ] = 0.18277
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg1_ch1[ thetaList=(Zlldata_syst) asymmThetaList=() otherFactorList=() ] = 98.0599
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg2_ch1[ thetaList=(CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c) asymmThetaList=() otherFactorList=() ] = 80.9058
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg3_ch1[ thetaList=(CMS_eff_c,QCDscale_VV,lumi_8TeV,pdf_VV) asymmThetaList=() otherFactorList=() ] = 109.055
+ProcessNormalization::n_exp_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1[ thetaList=(CMS_eff_c,lumi_8TeV,pdf_VV) asymmThetaList=() otherFactorList=(r_Scaling_WWgammaZ_WV_atgc_semileptonic_ch1) ] = 192.85
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg1_ch1 * systeff_ch1_WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeV ] = 98.0599
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg2_ch1 * systeff_ch1_WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV ] = 80.9058
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg3_ch1 * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_eff_b * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_ewk * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_les * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_pu * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umet * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_res_j * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_scale_j * systeff_ch1_WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV ] = 109.055
+RooProduct::n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1[ n_exp_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1 * shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1__norm ] = 192.85
+RooFormulaVar::r_Scaling_WWgammaZ_WV_atgc_semileptonic_ch1[ actualVars=(r,Scaling_WWgammaZ_WV_atgc_semileptonic_ch1) formula="@0*@1" ] = 1.03686
+RooProduct::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1__norm[ ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral4 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral8 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral9 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral10 ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeV[ kappaLow=0.743561 kappaHigh=1.25644 theta=zll_CMS_hzz2l2v_stat_ll_zll_8TeV ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV[ kappaLow=0.775334 kappaHigh=1.22467 theta=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_eff_b[ kappaLow=0.998007 kappaHigh=1.00243 theta=CMS_eff_b ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_ewk[ kappaLow=1.02366 kappaHigh=0.97634 theta=CMS_hzz2l2v_ewk ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_les[ kappaLow=0.969009 kappaHigh=1.0167 theta=CMS_hzz2l2v_les ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_pu[ kappaLow=1.005 kappaHigh=0.99494 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umet[ kappaLow=0.962516 kappaHigh=1.0256 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_res_j[ kappaLow=1.00723 kappaHigh=0.98849 theta=CMS_res_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_scale_j[ kappaLow=1.07313 kappaHigh=0.90173 theta=CMS_scale_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV[ kappaLow=0.978764 kappaHigh=1.02124 theta=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV ] = 1
+
+datasets
+--------
+RooDataHist::data_obs(CMS_channel,W_pt_ch1)
+RooDataHist::DHIST_SM_wv_semil_ch1_shape_for_scale(W_pt_ch1)
+
+named sets
+----------
+ModelConfig_GlobalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDscale_VV_In,Zlldata_syst_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+ModelConfig_NuisParams:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+ModelConfig_Observables:(W_pt_ch1,CMS_channel)
+ModelConfig_POI:(r,dkg,dg1,lZ)
+ModelConfig_bonly_GlobalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDscale_VV_In,Zlldata_syst_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+ModelConfig_bonly_NuisParams:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+ModelConfig_bonly_Observables:(W_pt_ch1,CMS_channel)
+ModelConfig_bonly_POI:(r,dkg,dg1,lZ)
+POI:(r,dkg,dg1,lZ)
+globalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDscale_VV_In,Zlldata_syst_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+nuisances:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+observables:(W_pt_ch1,CMS_channel)
+
+generic objects
+---------------
+TH1D::SM_wv_semil_ch1_shape_for_scale
+RooStats::ModelConfig::ModelConfig
+RooStats::ModelConfig::ModelConfig_bonly
+RooArgSet::discreteParams
+
+Workspace has a ModelConfig for signal called 'ModelConfig', with contents:
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (W_pt_ch1,CMS_channel)
+Parameters of Interest:  RooArgSet:: = (r,dkg,dg1,lZ)
+Nuisance Parameters:     RooArgSet:: = (CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+Global Observables:      RooArgSet:: = (CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDscale_VV_In,Zlldata_syst_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+PDF:                     RooSimultaneousOpt::model_s[ indexCat=CMS_channel ch1=pdf_binch1 extraConstraints=() ] = 0.0669149
+
+Input ModelConfig 'ModelConfig': 
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (W_pt_ch1,CMS_channel)
+Parameters of Interest:  RooArgSet:: = (r,dkg,dg1,lZ)
+Nuisance Parameters:     RooArgSet:: = (CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+Global Observables:      RooArgSet:: = (CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_ewk_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDscale_VV_In,Zlldata_syst_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_sherpa_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+PDF:                     RooSimultaneousOpt::model_s[ indexCat=CMS_channel ch1=pdf_binch1 extraConstraints=() ] = 0.0669149
+
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooUniform::prior
+Computing limit starting from observation
+ bin          W_pt_ch1       CMS_channel    weight
+   0               0.5               ch1    27.000
+   1               1.5               ch1   160.000
+   2               2.5               ch1   117.000
+   3               3.5               ch1   148.000
+   4               4.5               ch1    13.000
+   5               5.5               ch1     0.000
+Set default minimizer to Minuit2
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_eff_b) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_eff_c) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_hzz2l2v_ewk) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_hzz2l2v_les) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_hzz2l2v_pu) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_hzz2l2v_umet) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_res_j) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(CMS_scale_j) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(QCDscale_VV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(Zlldata_syst) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(lumi_8TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(pdf_VV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(zll_CMS_hzz2l2v_stat_ll_zll_8TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(zz2l2nu_CMS_hzz2l2v_sherpa) new range named 'optimizeBoundRange' created with bounds [-7,7]
+[#1] INFO:Eval -- RooRealVar::setRange(zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+ret/SM_integral= 192.85/185.994 = 1.03686
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph_Int[W_pt_ch1]) using numeric integrator RooIntegrator1D to calculate Int(W_pt_ch1)
+do first Minimization 
+Minuit2Minimizer: Minimize with max-calls 10000 convergence for edm < 0.1 strategy 2
+MnSeedGenerator: for initial parameters FCN = 0
+ret/SM_integral= 192.848/185.994 = 1.03685
+ret/SM_integral= 192.851/185.994 = 1.03687
+ret/SM_integral= 192.847/185.994 = 1.03685
+ret/SM_integral= 192.852/185.994 = 1.03687
+ret/SM_integral= 192.85/185.994 = 1.03686
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph over range (0,6) did not converge after 20 steps
+   [1] h = 1 , s = inf
+   [2] h = 0.25 , s = inf
+   [3] h = 0.0625 , s = inf
+   [4] h = 0.015625 , s = inf
+   [5] h = 0.00390625 , s = inf
+   [6] h = 0.000976562 , s = inf
+   [7] h = 0.000244141 , s = inf
+   [8] h = 6.10352e-05 , s = inf
+   [9] h = 1.52588e-05 , s = inf
+   [10] h = 3.8147e-06 , s = inf
+   [11] h = 9.53674e-07 , s = inf
+   [12] h = 2.38419e-07 , s = inf
+   [13] h = 5.96046e-08 , s = inf
+   [14] h = 1.49012e-08 , s = inf
+   [15] h = 3.72529e-09 , s = inf
+   [16] h = 9.31323e-10 , s = inf
+   [17] h = 2.32831e-10 , s = inf
+   [18] h = 5.82077e-11 , s = inf
+   [19] h = 1.45519e-11 , s = inf
+   [20] h = 3.63798e-12 , s = inf
+WARNING: underflow to nan in ch1
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (0.0366017) to force MIGRAD to back out of this region. Error log follows
+Parameter values: CMS_eff_b=0, CMS_eff_c=0, CMS_hzz2l2v_ewk=0, CMS_hzz2l2v_les=0, CMS_hzz2l2v_pu=0, CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c=0, CMS_hzz2l2v_umet=0, CMS_res_j=0, CMS_scale_j=0, QCDscale_VV=0, Zlldata_syst=0, dkg=0, lumi_8TeV=0, pdf_VV=0, topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0, wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV=0, zll_CMS_hzz2l2v_stat_ll_zll_8TeV=0, zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto=-0.01, zz2l2nu_CMS_hzz2l2v_sherpa=0, zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV=0
+RooAbsReal::ch1[ params=(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,pdf_VV,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) ]
+     Number of events is negative or error @ params=(CMS_eff_b = 0,CMS_eff_c = 0,CMS_hzz2l2v_ewk = 0,CMS_hzz2l2v_les = 0,CMS_hzz2l2v_pu = 0,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c = 0,CMS_hzz2l2v_umet = 0,CMS_res_j = 0,CMS_scale_j = 0,QCDscale_VV = 0,Zlldata_syst = 0,dg1 = 0,dkg = 0,kappaH_1 = 1.00168,kappaH_10 = 1.03495,kappaH_2 = 1.18315,kappaH_3 = 1.01404,kappaH_4 = 0.992372,kappaH_5 = 1.01318,kappaH_6 = 1.01278,kappaH_7 = 0.992505,kappaH_8 = 0.90939,kappaH_9 = 1.00991,kappaL_1 = 0.998899,kappaL_10 = 0.96671,kappaL_2 = 0.81826,kappaL_3 = 0.98101,kappaL_4 = 1.00694,kappaL_5 = 0.986815,kappaL_6 = 0.98447,kappaL_7 = 1.00858,kappaL_8 = 1.06301,kappaL_9 = 0.990088,lZ = 0,lumi_8TeV = 0,pdf_VV = 0,r = 1,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV = 0,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV = 0,zll_CMS_hzz2l2v_stat_ll_zll_8TeV = 0,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto = -0.01,zz2l2nu_CMS_hzz2l2v_sherpa = 0,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV = 0)
+
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph over range (0,6) did not converge after 20 steps
+   [1] h = 1 , s = inf
+   [2] h = 0.25 , s = inf
+   [3] h = 0.0625 , s = inf
+   [4] h = 0.015625 , s = inf
+   [5] h = 0.00390625 , s = inf
+   [6] h = 0.000976562 , s = inf
+   [7] h = 0.000244141 , s = inf
+   [8] h = 6.10352e-05 , s = inf
+   [9] h = 1.52588e-05 , s = inf
+   [10] h = 3.8147e-06 , s = inf
+   [11] h = 9.53674e-07 , s = inf
+   [12] h = 2.38419e-07 , s = inf
+   [13] h = 5.96046e-08 , s = inf
+   [14] h = 1.49012e-08 , s = inf
+   [15] h = 3.72529e-09 , s = inf
+   [16] h = 9.31323e-10 , s = inf
+   [17] h = 2.32831e-10 , s = inf
+   [18] h = 5.82077e-11 , s = inf
+   [19] h = 1.45519e-11 , s = inf
+   [20] h = 3.63798e-12 , s = inf
+WARNING: underflow to nan in ch1
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (0.0366017) to force MIGRAD to back out of this region. Error log follows
+Parameter values: CMS_eff_b=0, CMS_eff_c=0, CMS_hzz2l2v_ewk=0, CMS_hzz2l2v_les=0, CMS_hzz2l2v_pu=0, CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c=0, CMS_hzz2l2v_umet=0, CMS_res_j=0, CMS_scale_j=0, QCDscale_VV=0, Zlldata_syst=0, dkg=0, lumi_8TeV=0, pdf_VV=0, topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0, wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV=0, zll_CMS_hzz2l2v_stat_ll_zll_8TeV=0, zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto=-0.001, zz2l2nu_CMS_hzz2l2v_sherpa=0, zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV=0
+RooAbsReal::ch1[ params=(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,pdf_VV,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) ]
+     Number of events is negative or error @ params=(CMS_eff_b = 0,CMS_eff_c = 0,CMS_hzz2l2v_ewk = 0,CMS_hzz2l2v_les = 0,CMS_hzz2l2v_pu = 0,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c = 0,CMS_hzz2l2v_umet = 0,CMS_res_j = 0,CMS_scale_j = 0,QCDscale_VV = 0,Zlldata_syst = 0,dg1 = 0,dkg = 0,kappaH_1 = 1.00168,kappaH_10 = 1.03495,kappaH_2 = 1.18315,kappaH_3 = 1.01404,kappaH_4 = 0.992372,kappaH_5 = 1.01318,kappaH_6 = 1.01278,kappaH_7 = 0.992505,kappaH_8 = 0.90939,kappaH_9 = 1.00991,kappaL_1 = 0.998899,kappaL_10 = 0.96671,kappaL_2 = 0.81826,kappaL_3 = 0.98101,kappaL_4 = 1.00694,kappaL_5 = 0.986815,kappaL_6 = 0.98447,kappaL_7 = 1.00858,kappaL_8 = 1.06301,kappaL_9 = 0.990088,lZ = 0,lumi_8TeV = 0,pdf_VV = 0,r = 1,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV = 0,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV = 0,zll_CMS_hzz2l2v_stat_ll_zll_8TeV = 0,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto = -0.001,zz2l2nu_CMS_hzz2l2v_sherpa = 0,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV = 0)
+
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph over range (0,6) did not converge after 20 steps
+   [1] h = 1 , s = inf
+   [2] h = 0.25 , s = inf
+   [3] h = 0.0625 , s = inf
+   [4] h = 0.015625 , s = inf
+   [5] h = 0.00390625 , s = inf
+   [6] h = 0.000976562 , s = inf
+   [7] h = 0.000244141 , s = inf
+   [8] h = 6.10352e-05 , s = inf
+   [9] h = 1.52588e-05 , s = inf
+   [10] h = 3.8147e-06 , s = inf
+   [11] h = 9.53674e-07 , s = inf
+   [12] h = 2.38419e-07 , s = inf
+   [13] h = 5.96046e-08 , s = inf
+   [14] h = 1.49012e-08 , s = inf
+   [15] h = 3.72529e-09 , s = inf
+   [16] h = 9.31323e-10 , s = inf
+   [17] h = 2.32831e-10 , s = inf
+   [18] h = 5.82077e-11 , s = inf
+   [19] h = 1.45519e-11 , s = inf
+   [20] h = 3.63798e-12 , s = inf
+WARNING: underflow to nan in ch1
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (0.0366017) to force MIGRAD to back out of this region. Error log follows
+Parameter values: CMS_eff_b=0, CMS_eff_c=0, CMS_hzz2l2v_ewk=0, CMS_hzz2l2v_les=0, CMS_hzz2l2v_pu=0, CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c=0, CMS_hzz2l2v_umet=0, CMS_res_j=0, CMS_scale_j=0, QCDscale_VV=0, Zlldata_syst=0, dkg=0, lumi_8TeV=0, pdf_VV=0, topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0, wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV=0, zll_CMS_hzz2l2v_stat_ll_zll_8TeV=0, zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto=-0.0001, zz2l2nu_CMS_hzz2l2v_sherpa=0, zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV=0
+RooAbsReal::ch1[ params=(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,pdf_VV,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) ]
+     Number of events is negative or error @ params=(CMS_eff_b = 0,CMS_eff_c = 0,CMS_hzz2l2v_ewk = 0,CMS_hzz2l2v_les = 0,CMS_hzz2l2v_pu = 0,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c = 0,CMS_hzz2l2v_umet = 0,CMS_res_j = 0,CMS_scale_j = 0,QCDscale_VV = 0,Zlldata_syst = 0,dg1 = 0,dkg = 0,kappaH_1 = 1.00168,kappaH_10 = 1.03495,kappaH_2 = 1.18315,kappaH_3 = 1.01404,kappaH_4 = 0.992372,kappaH_5 = 1.01318,kappaH_6 = 1.01278,kappaH_7 = 0.992505,kappaH_8 = 0.90939,kappaH_9 = 1.00991,kappaL_1 = 0.998899,kappaL_10 = 0.96671,kappaL_2 = 0.81826,kappaL_3 = 0.98101,kappaL_4 = 1.00694,kappaL_5 = 0.986815,kappaL_6 = 0.98447,kappaL_7 = 1.00858,kappaL_8 = 1.06301,kappaL_9 = 0.990088,lZ = 0,lumi_8TeV = 0,pdf_VV = 0,r = 1,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV = 0,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV = 0,zll_CMS_hzz2l2v_stat_ll_zll_8TeV = 0,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto = -0.0001,zz2l2nu_CMS_hzz2l2v_sherpa = 0,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV = 0)
+
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph over range (0,6) did not converge after 20 steps
+   [1] h = 1 , s = inf
+   [2] h = 0.25 , s = inf
+   [3] h = 0.0625 , s = inf
+   [4] h = 0.015625 , s = inf
+   [5] h = 0.00390625 , s = inf
+   [6] h = 0.000976562 , s = inf
+   [7] h = 0.000244141 , s = inf
+   [8] h = 6.10352e-05 , s = inf
+   [9] h = 1.52588e-05 , s = inf
+   [10] h = 3.8147e-06 , s = inf
+   [11] h = 9.53674e-07 , s = inf
+   [12] h = 2.38419e-07 , s = inf
+   [13] h = 5.96046e-08 , s = inf
+   [14] h = 1.49012e-08 , s = inf
+   [15] h = 3.72529e-09 , s = inf
+   [16] h = 9.31323e-10 , s = inf
+   [17] h = 2.32831e-10 , s = inf
+   [18] h = 5.82077e-11 , s = inf
+   [19] h = 1.45519e-11 , s = inf
+   [20] h = 3.63798e-12 , s = inf
+WARNING: underflow to nan in ch1
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (0.0366017) to force MIGRAD to back out of this region. Error log follows
+Parameter values: CMS_eff_b=0, CMS_eff_c=0, CMS_hzz2l2v_ewk=0, CMS_hzz2l2v_les=0, CMS_hzz2l2v_pu=0, CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c=0, CMS_hzz2l2v_umet=0, CMS_res_j=0, CMS_scale_j=0, QCDscale_VV=0, Zlldata_syst=0, dkg=0, lumi_8TeV=0, pdf_VV=0, topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0, wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV=0, zll_CMS_hzz2l2v_stat_ll_zll_8TeV=0, zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto=-1e-05, zz2l2nu_CMS_hzz2l2v_sherpa=0, zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV=0
+RooAbsReal::ch1[ params=(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,pdf_VV,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) ]
+     Number of events is negative or error @ params=(CMS_eff_b = 0,CMS_eff_c = 0,CMS_hzz2l2v_ewk = 0,CMS_hzz2l2v_les = 0,CMS_hzz2l2v_pu = 0,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c = 0,CMS_hzz2l2v_umet = 0,CMS_res_j = 0,CMS_scale_j = 0,QCDscale_VV = 0,Zlldata_syst = 0,dg1 = 0,dkg = 0,kappaH_1 = 1.00168,kappaH_10 = 1.03495,kappaH_2 = 1.18315,kappaH_3 = 1.01404,kappaH_4 = 0.992372,kappaH_5 = 1.01318,kappaH_6 = 1.01278,kappaH_7 = 0.992505,kappaH_8 = 0.90939,kappaH_9 = 1.00991,kappaL_1 = 0.998899,kappaL_10 = 0.96671,kappaL_2 = 0.81826,kappaL_3 = 0.98101,kappaL_4 = 1.00694,kappaL_5 = 0.986815,kappaL_6 = 0.98447,kappaL_7 = 1.00858,kappaL_8 = 1.06301,kappaL_9 = 0.990088,lZ = 0,lumi_8TeV = 0,pdf_VV = 0,r = 1,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV = 0,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV = 0,zll_CMS_hzz2l2v_stat_ll_zll_8TeV = 0,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto = -1e-05,zz2l2nu_CMS_hzz2l2v_sherpa = 0,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV = 0)
+
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph over range (0,6) did not converge after 20 steps
+   [1] h = 1 , s = inf
+   [2] h = 0.25 , s = inf
+   [3] h = 0.0625 , s = inf
+   [4] h = 0.015625 , s = inf
+   [5] h = 0.00390625 , s = inf
+   [6] h = 0.000976562 , s = inf
+   [7] h = 0.000244141 , s = inf
+   [8] h = 6.10352e-05 , s = inf
+   [9] h = 1.52588e-05 , s = inf
+   [10] h = 3.8147e-06 , s = inf
+   [11] h = 9.53674e-07 , s = inf
+   [12] h = 2.38419e-07 , s = inf
+   [13] h = 5.96046e-08 , s = inf
+   [14] h = 1.49012e-08 , s = inf
+   [15] h = 3.72529e-09 , s = inf
+   [16] h = 9.31323e-10 , s = inf
+   [17] h = 2.32831e-10 , s = inf
+   [18] h = 5.82077e-11 , s = inf
+   [19] h = 1.45519e-11 , s = inf
+   [20] h = 3.63798e-12 , s = inf
+WARNING: underflow to nan in ch1
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (0.0366017) to force MIGRAD to back out of this region. Error log follows
+Parameter values: CMS_eff_b=0, CMS_eff_c=0, CMS_hzz2l2v_ewk=0, CMS_hzz2l2v_les=0, CMS_hzz2l2v_pu=0, CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c=0, CMS_hzz2l2v_umet=0, CMS_res_j=0, CMS_scale_j=0, QCDscale_VV=0, Zlldata_syst=0, dkg=0, lumi_8TeV=0, pdf_VV=0, topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0, wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV=0, zll_CMS_hzz2l2v_stat_ll_zll_8TeV=0, zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto=-1e-06, zz2l2nu_CMS_hzz2l2v_sherpa=0, zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV=0
+RooAbsReal::ch1[ params=(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_ewk,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDscale_VV,Zlldata_syst,dg1,dkg,kappaH_1,kappaH_10,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaH_9,kappaL_1,kappaL_10,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,kappaL_9,lZ,lumi_8TeV,pdf_VV,r,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV) ]
+     Number of events is negative or error @ params=(CMS_eff_b = 0,CMS_eff_c = 0,CMS_hzz2l2v_ewk = 0,CMS_hzz2l2v_les = 0,CMS_hzz2l2v_pu = 0,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c = 0,CMS_hzz2l2v_umet = 0,CMS_res_j = 0,CMS_scale_j = 0,QCDscale_VV = 0,Zlldata_syst = 0,dg1 = 0,dkg = 0,kappaH_1 = 1.00168,kappaH_10 = 1.03495,kappaH_2 = 1.18315,kappaH_3 = 1.01404,kappaH_4 = 0.992372,kappaH_5 = 1.01318,kappaH_6 = 1.01278,kappaH_7 = 0.992505,kappaH_8 = 0.90939,kappaH_9 = 1.00991,kappaL_1 = 0.998899,kappaL_10 = 0.96671,kappaL_2 = 0.81826,kappaL_3 = 0.98101,kappaL_4 = 1.00694,kappaL_5 = 0.986815,kappaL_6 = 0.98447,kappaL_7 = 1.00858,kappaL_8 = 1.06301,kappaL_9 = 0.990088,lZ = 0,lumi_8TeV = 0,pdf_VV = 0,r = 1,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV = 0,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV = 0,zll_CMS_hzz2l2v_stat_ll_zll_8TeV = 0,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto = -1e-06,zz2l2nu_CMS_hzz2l2v_sherpa = 0,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV = 0)
+
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =      84.4347 NCalls =     89

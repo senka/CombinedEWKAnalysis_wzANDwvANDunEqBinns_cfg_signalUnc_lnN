@@ -1,0 +1,25 @@
+
+# Simple counting experiment, with one signal and a few background processes 
+imax 1  number of channels
+jmax 3  number of backgrounds
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------
+shapes WV_semileptonic_bkg1_ele  eleboosted ./ele_boosted_ws.root WV_eleboosted:$PROCESS WV_eleboosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg2_ele  eleboosted ./ele_boosted_ws.root WV_eleboosted:$PROCESS WV_eleboosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg3_ele  eleboosted ./ele_boosted_ws.root WV_eleboosted:$PROCESS WV_eleboosted:$PROCESS_$SYSTEMATIC
+shapes data_obs                eleboosted ./ele_boosted_ws.root WV_eleboosted:$PROCESS    
+shapes WWgammaZ_WV_atgc_semileptonic_ele eleboosted ./ele_boosted_ws.root WV_eleboosted:ATGCPdf_$PROCESS WV_eleboosted:ATGCPdf_$PROCESS_$SYSTEMATIC    
+------------
+bin eleboosted 
+observation 1e-05
+------------
+bin                         eleboosted					eleboosted			eleboosted			eleboosted       
+process			    WWgammaZ_WV_atgc_semileptonic_ele    	WV_semileptonic_bkg1_ele	WV_semileptonic_bkg2_ele	WV_semileptonic_bkg3_ele       
+process                     0	  	       				1 				2 				3       
+rate                        0.153070598841	 			2.49453663826 			1e-05 			0.163198038936           
+------------
+lumi_8TeV           lnN     1.044             				-				-				-				-				-				-
+zll_CMS_hzz2l2v_stat_ll_zll_8TeV shape1  -				1.0 				-				-
+topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV shape1  -				-				1.0 				-
+wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV shape1  -				-				-				1.0 
+zz2l2nu_CMS_hzz2l2v_sherpa        shape1  1.0          				-				-				-

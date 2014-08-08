@@ -1,0 +1,24 @@
+At r = 0.165999:	q_mu = 5.15152	q_A  = 1.38144	CLsb = 0.00272	CLb  = 0.05438	CLs  = 0.05011
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.1660
+Expected  2.5%: r < 0.1476
+Expected 16.0%: r < 0.2078
+Expected 50.0%: r < 0.3135
+Expected 84.0%: r < 0.4872
+Expected 97.5%: r < 0.7257
+
+Done in 1.23 min (cpu), 1.24 min (real)
+mkdir: cannot create directory `limits_f5z_8TeV_EWK': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.002': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.003': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.004': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.005': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.006': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/-0.007': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.002': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.003': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.004': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.005': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.006': File exists
+mkdir: cannot create directory `limits_f5z_8TeV_EWK/0.007': File exists

@@ -1,0 +1,25 @@
+
+# Simple counting experiment, with one signal and a few background processes 
+imax 1  number of channels
+jmax 1  number of backgrounds
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------
+shapes WV_semileptonic_bkg_elmu_ZZ_4l_8TeV  elmu_ZZ_4l_8TeVboosted ./elmu_ZZ_4l_8TeV_boosted_ws.root WV_elmu_ZZ_4l_8TeVboosted:$PROCESS WV_elmu_ZZ_4l_8TeVboosted:$PROCESS_$SYSTEMATIC
+shapes data_obs                elmu_ZZ_4l_8TeVboosted ./elmu_ZZ_4l_8TeV_boosted_ws.root WV_elmu_ZZ_4l_8TeVboosted:$PROCESS    
+shapes WWgammaZ_WV_atgc_semileptonic_elmu_ZZ_4l_8TeV elmu_ZZ_4l_8TeVboosted ./elmu_ZZ_4l_8TeV_boosted_ws.root WV_elmu_ZZ_4l_8TeVboosted:ATGCPdf_$PROCESS WV_elmu_ZZ_4l_8TeVboosted:ATGCPdf_$PROCESS_$SYSTEMATIC    
+------------
+bin elmu_ZZ_4l_8TeVboosted 
+observation 148.0
+------------
+bin                         elmu_ZZ_4l_8TeVboosted		      elmu_ZZ_4l_8TeVboosted
+process                     WWgammaZ_WV_atgc_semileptonic_elmu_ZZ_4l_8TeV   WV_semileptonic_bkg_elmu_ZZ_4l_8TeV
+process                     0			      1		
+rate                        136.092387825		      2.35114452615	
+    
+------------
+lumi_8TeV           lnN     1.022		      -
+pdf_VV        lnN  1.04                       -
+CMS_eff_c        lnN  1.03                       -
+background_elmuboosted_backshape shape1  -                         1.0 
+CMS_hzz2l2v_QCD_ACC_JVeto        shape1  1.0                       -
+ZZ_4l_other        shape1  1.0                       -

@@ -1,0 +1,47 @@
+FVAL  = -4.02023902904127084
+Edm   = 2.47543798360943406e-05
+Nfcn  = 868
+CMS_eff_b	  = -0.034064	 +/-  1.11623
+CMS_eff_c	  = 0.00399975	 +/-  0.976883
+CMS_hzz2l2v_QCD_ACC_JVeto	  = 0.425067	 +/-  0.154923
+CMS_hzz2l2v_ewk	  = -0.30309	 +/-  0.949758
+CMS_hzz2l2v_les	  = 0.265517	 +/-  1.00203
+CMS_hzz2l2v_pu	  = -0.0448378	 +/-  1.03594
+CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c	  = 0.428142	 +/-  0.924563
+CMS_hzz2l2v_umet	  = 0.0263849	 +/-  1.04129
+CMS_res_j	  = -0.164956	 +/-  0.89299
+CMS_scale_j	  = -0.542814	 +/-  0.76075
+Zlldata_syst	  = -0.942809	 +/-  0.843592
+lumi_8TeV	  = 0.00347322	 +/-  0.982619
+pdf_VV	  = -0.00533432	 +/-  0.92923
+topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV	  = -0.218071	 +/-  0.82527
+wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV	  = -0.0409295	 +/-  1.01193
+zll_CMS_hzz2l2v_stat_ll_zll_8TeV	  = -1.10432	 +/-  0.798383
+zz2l2nu_CMS_hzz2l2v_sherpa	  = 1.09716	 +/-  0.598302
+zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV	  = -0.500715	 +/-  0.970396
+
+==========================
+looser limit:
+
+
+FVAL  = -1759.71199542156614
+Edm   = 0
+Nfcn  = 1
+CMS_eff_b	  = 0.00593741	 +/-  8.86626
+CMS_eff_c	  = -0.266098	 +/-  0.916007
+CMS_hzz2l2v_QCD_ACC_JVeto	  = -0.47415	 +/-  0.855807
+CMS_hzz2l2v_ewk	  = 0.218903	 +/-  3.53801
+CMS_hzz2l2v_les	  = 0.609132	 +/-  0.897779
+CMS_hzz2l2v_pu	  = -0.125259	 +/-  1.00841
+CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c	  = 1.42319	 +/-  0.796148
+CMS_hzz2l2v_umet	  = 0.212413	 +/-  0.83822
+CMS_res_j	  = -0.0682591	 +/-  0.70056
+CMS_scale_j	  = -0.345154	 +/-  2.46547
+Zlldata_syst	  = -0.397038	 +/-  0.699997
+lumi_8TeV	  = 0.0986337	 +/-  0.910757
+pdf_VV	  = 0.0181422	 +/-  1.04145
+topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV	  = 0.216207	 +/-  0.830489
+wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV	  = -0.0701485	 +/-  0.916649
+zll_CMS_hzz2l2v_stat_ll_zll_8TeV	  = -1.00709	 +/-  0.692404
+zz2l2nu_CMS_hzz2l2v_sherpa	  = 0.956612	 +/-  2.56847
+zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV	  = -0.0281599	 +/-  35.268
