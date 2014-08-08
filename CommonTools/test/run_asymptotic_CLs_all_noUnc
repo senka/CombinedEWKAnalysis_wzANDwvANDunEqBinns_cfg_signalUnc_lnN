@@ -1,8 +1,0 @@
-source run_asymptotic_CLs_f4g_7TeV_noUnc
-source run_asymptotic_CLs_f5g_7TeV_noUnc
-source run_asymptotic_CLs_f4z_7TeV_noUnc
-source run_asymptotic_CLs_f5z_7TeV_noUnc
-source run_asymptotic_CLs_f4g_8TeV_noUnc
-source run_asymptotic_CLs_f5g_8TeV_noUnc
-source run_asymptotic_CLs_f4z_8TeV_noUnc
-source run_asymptotic_CLs_f5z_8TeV_noUnc
