@@ -60,12 +60,10 @@ for i in range(0,NlnN):
     for value in cfg.get('Global','lnN%i_value'%(i+1)).split(','):
         lnN_value[i].append(value)
 
-#    lnN_value.append(cfg.get('Global','lnN%i_value'%i))
 
 lnN_for = []
 for i in range(0,NlnN):
     lnN_for.append([])
-#    print i
     for name in cfg.get('Global','lnN%i_for'%(i+1)).split(','):
         lnN_for[i].append(name)
 
@@ -73,8 +71,6 @@ print '\n\t\t=============================================> lnN: ',lnN_name
 print 'lnN value: ',lnN_value
 print 'lnN for: ',lnN_for
 
-
-############################
 
 fit_sections.remove('Global') #don't need to iterate over the global configuration
 
@@ -84,33 +80,8 @@ basepath = '%s/src/CombinedEWKAnalysis/CommonTools/data/WV_semileptonic'%os.envi
 for section in fit_sections:
     codename = section
     lType = codename
-#    print '\n\tlType=',lType
     f = TFile('%s/%s_boosted.root'%(basepath,codename))
 
-    # read in lnN nuisances from 'channel' and overright lnN from 'Global':
-
-#    cfg_items=cfg.items(codename)
-#    for cfg_item in cfg_items:
-#        if 'NlnN' in cfg_item:
-#            NlnN = int(cfg.get(codename,'NlnN'))       
-
-#            lnN_name = []
-#            for i in range(1,NlnN+1):
-#                lnN_name.append(cfg.get(codename,'lnN%i_name'%i))
-#            lnN_value = []
-#            for i in range(0,NlnN):
-#                lnN_value.append([])
-#                for value in cfg.get(codename,'lnN%i_value'%(i+1)).split(','):
-#                    lnN_value[i].append(value)
-#            lnN_for = []
-#            for i in range(0,NlnN):
-#                lnN_for.append([])
-#                for name in cfg.get(codename,'lnN%i_for'%(i+1)).split(','):
-#                    lnN_for[i].append(name)
-
-#            print '\n\t\t========= rewritting NlnN nuisance from "Global" ====================================> lnN: ',lnN_name
-#            print 'lnN value: ',lnN_value
-#            print 'lnN for: ',lnN_for
 
 
     Nbkg = cfg.get(codename,'Nbkg')
@@ -130,14 +101,12 @@ for section in fit_sections:
     print 'backgrounds= ',background
     background_shapeSyst = []
     for i in range(0,Nbkg_int):
-#        print ' ========================> \t\t i= ',i
         background_shapeSyst.append([])
         cfg_items=cfg.items(codename)
         for cfg_item in cfg_items:
             if ('bkg%i_shape_syst'%(i+1) in cfg_item):
                 for name in cfg.get(codename,'bkg%i_shape_syst'%(i+1)).split(','):
                     background_shapeSyst[i].append(name)
-#    print '  $$$$$$$$$$$$$$$$$$$$$$$$ bkg shape: ', background_shapeSyst
 
 
     background_backshapeUp = []
@@ -146,11 +115,7 @@ for section in fit_sections:
     for j in range(0,Nbkg_int):
         background_backshapeUp.append([])
         background_backshapeDown.append([])
-#        print 'len(background_shapeSyst[j]= ',len(background_shapeSyst[j])
         for i in range(0,len(background_shapeSyst[j])):
-#            print ' i= ',i," j= ",j," len(background_shapeSyst[j])",len(background_shapeSyst[j])
-#            print ' bkg shape syst: ',background_shapeSyst[j]
-#            print ' getting bkgUp ','%sUp'%background_shapeSyst[j][i]
             background_backshapeUp[j].append(f.Get('%sUp'%background_shapeSyst[j][i]))
             background_backshapeDown[j].append(f.Get('%sDown'%background_shapeSyst[j][i]))
 
@@ -162,15 +127,11 @@ for section in fit_sections:
     doSignalBkg_corr_unc=False
     cfg_items=cfg.items(codename)
     for cfg_item in cfg_items:
-#        print ' cfg item: ',cfg_item
         if 'signal_shape_syst' in cfg_item:
             doSignalShape_unc = True
         if 'nsigbkg_corr_unc' in cfg_item:
-#            print '=>has doSignalBkg_corr_unc!'
             doSignalBkg_corr_unc = True
 
-#    print 'doSignalShape_unc=',doSignalShape_unc
-#    print 'doSignalBkg_corr_unc=',doSignalBkg_corr_unc
 
     if (doSignalShape_unc):
         diboson_up = {}
@@ -179,7 +140,6 @@ for section in fit_sections:
         norm_sig_sm_down = {}
         signal_shapeSyst = [string(i) for i in cfg.get(codename,'signal_shape_syst').split(',')]
         for i in range(0,len(signal_shapeSyst)):
-#            print ' signal shape syst: ',signal_shapeSyst[i]
             diboson_up[i] = f.Get('%sUp'%signal_shapeSyst[i])
             diboson_down[i] = f.Get('%sDown'%signal_shapeSyst[i])
             norm_sig_sm_up[i] = diboson_up[i].Integral()
@@ -187,9 +147,7 @@ for section in fit_sections:
 
     if (doSignalBkg_corr_unc):
         NSigBkg_corr_unc = cfg.get(codename,'NSigBkg_corr_unc')
-#        print 'NSigBkg_corr_unc=',NSigBkg_corr_unc
         NSigBkg_corr_unc_int=int(NSigBkg_corr_unc)
-#        SignalBkg_corr_name = []
 
         SignalBkg_corr_name_ws = []
         for i in range(1,NSigBkg_corr_unc_int+1):
@@ -198,48 +156,29 @@ for section in fit_sections:
 
         SignalBkg_corr_name = {}
         for i in range(1,NSigBkg_corr_unc_int+1):
-#            signal_shapeSyst = [string(i) for i in cfg.get(codename,'signal_shape_syst').split(',')]
-#            SignalBkg_corr_name.append(string(i) for i in cfg.get(codename,'correlated_SigBkg_unc%s'%i).split(','))
             SignalBkg_corr_name[i-1]=[string(j) for j in cfg.get(codename,'correlated_SigBkg_unc%s'%i).split(',')]
-#        print 'SigBkg_corr_names= ',SignalBkg_corr_name
-#        print 'SignalBkg_corr_name[0,0]= ',SignalBkg_corr_name[0][0]
-#        print 'SignalBkg_corr_name[0,1]= ',SignalBkg_corr_name[0][1]
 
 # check if shape uncertainty name is one of those where Signal and bkg uncertainties are correlated
     def isItCorrelated(name):
         isItCorr=False
-#        print '\t ----> isItCorrelated: testing ',name
-        #    if ('_eff_b' in name or '_les' in name or '_pu' in name or '_umet' in name or '_res_j' in name or '_scale_j' in name or '_ewk' in name ):
         for i in range(0,NSigBkg_corr_unc_int):
             if (name in SignalBkg_corr_name[i]):
                 isItCorr=True
-#        print '\t\t-> ',isItCorr
         return isItCorr
 
     def isItCorrelated_name(name):
-#        print '\t ----> isItCorrelated: testing ',name
         name_out=name
-        #    if ('_eff_b' in name or '_les' in name or '_pu' in name or '_umet' in name or '_res_j' in name or '_scale_j' in name or '_ewk' in name ):
         for i in range(0,NSigBkg_corr_unc_int):
             if (name in SignalBkg_corr_name[i]):
                 name_out=SignalBkg_corr_name_ws[i]
-#                name_out='correlated_SigBkg_unc%i'%(i+1)
-#        print '\t  -> name: ', name_out
         return name_out
 
-#    print ' is Znnu_kfast correlated? ',isItCorrelated('Znnu_kfast'),' ',isItCorrelated_name('Znnu_kfast')
-#    print ' is Wgamma_pes correlated? ',isItCorrelated('Wgamma_pes'),' ',isItCorrelated_name('Wgamma_pes')
-#    print ' is Znnu_pes correlated? ',isItCorrelated('Znnu_pes'),' ',isItCorrelated_name('Znnu_pes')
     
     norm_sig_sm = diboson.Integral()
     norm_bkg = []
     for i in range(0,Nbkg_int):
         norm_bkg.append(background[i].Integral())
     norm_obs = data_obs.Integral()
-#    print 'bkg integral: ',norm_bkg
-    
-#    if (doSignalShape_unc):
-#        print 'signal shape unc: ',norm_sig_sm_down,' ',norm_sig_sm,' ',norm_sig_sm_up
     
     theWS = RooWorkspace('WV_%sboosted'%codename, 'WV_%sboosted'%codename)
     
@@ -252,9 +191,6 @@ for section in fit_sections:
         binning.append(data_obs.GetBinLowEdge(i))
     binning.append(data_obs.GetBinLowEdge(data_obs.GetNbinsX()+1))
 
-#    print "bining: "
-#    for i in range(0, len(binning)):
-#        print binning[i]
 
     bins=RooBinning(len(binning)-1, binning)
 
@@ -282,17 +218,11 @@ for section in fit_sections:
     for j in range(0,Nbkg_int):
         bkgHist_systUp.append([])
         bkgHist_systDown.append([])
-#        print 'ibkg= ',j,' len(background_shapeSyst[j])= ',len(background_shapeSyst[j])
         for i in range(0,len(background_shapeSyst[j])):
-#            print '\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ '
-#            print '\n testing bkg unc: ',background_shapeSyst[j][i]
             name_forCorr=background_shapeSyst[j][i]
             if (isItCorrelated(background_shapeSyst[j][i])):
                 name_forCorr=isItCorrelated_name(background_shapeSyst[j][i])
-#                print '\t\t ----> this is correlated unc -> use name: ',name_forCorr
-#            print '\t\t\t -> use name in ws: ',name_forCorr
 
-#            print '\t%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% adding bkgUp: WV_semileptonic_bkg%i_%s_%sUp'%(j+1,codename,name_forCorr)
             bkgHist_systUp[j].append(RooDataHist('WV_semileptonic_bkg%i_%s_%sUp'%(j+1,codename,name_forCorr),
                                                  'WV_semileptonic_bkg%i_%s_%sUp'%(j+1,codename,name_forCorr),
                                                  vars,
@@ -311,13 +241,9 @@ for section in fit_sections:
         dibosonHist_up = {}
         dibosonHist_down = {}
         for i in range(0,len(signal_shapeSyst)):
-#            print '\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ '
-#            print '\n testing signal unc: ',signal_shapeSyst[i]
             name_forCorr=signal_shapeSyst[i]
             if (isItCorrelated(signal_shapeSyst[i])):
                 name_forCorr=isItCorrelated_name(signal_shapeSyst[i])
-#                print '\t\t ----> this is correlated unc -> use name: ',name_forCorr
-#            print '\t\t\t -> use name in ws: ',name_forCorr
 
             
             dibosonHist_up[i] = RooDataHist('WV_semileptonic_SM_%s_rawshape_%sUp'%(codename,name_forCorr),
@@ -340,13 +266,9 @@ for section in fit_sections:
         for i in range(0,len(signal_shapeSyst)):
 
 
-#            print '\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ '
-#            print '\n testing signal unc: ',signal_shapeSyst[i]
             name_forCorr=signal_shapeSyst[i]
             if (isItCorrelated(signal_shapeSyst[i])):
                 name_forCorr=isItCorrelated_name(signal_shapeSyst[i])
-#                print '\t\t ----> this is correlated unc -> use name: ',name_forCorr
-#            print '\t\t\t -> use name in ws: ',name_forCorr
 
             dibosonPdf_up[i] = RooHistFunc('WV_semileptonic_SM_%s_shape_%sUp'%(codename,name_forCorr),
                                         'WV_semileptonic_SM_%s_shape_%sUp'%(codename,name_forCorr),
@@ -358,16 +280,6 @@ for section in fit_sections:
                                           dibosonHist_down[i])
     
 
-#    print '\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ reading RooATGCFunction\n'
-#    aTGC = RooATGCFunction_wz('ATGC_shapescale_WWgammaZ_WV_atgc_semileptonic_%s'%codename,
-#                              'ATGC_shapescale_%s'%codename,
-#                              wpt,
-#                              lz,
-#                              dkg,
-#                              dg1, 
-#                              '%s/signal_WV_%s.root'%(basepath,codename))
-    
-#    print '\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ read RooATGCFunction\n'
     limtype = -1
 
     
@@ -384,9 +296,6 @@ for section in fit_sections:
                            'We can only use [dkg,lZ], [dg1,lZ], and [dkg,dg1]'\
                            ' as POIs right now!')
     
-#    print limtype
-
-#    print '\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ reading RooATGCSemi\n'
 
     if (doSignalShape_unc):
         kappaLow = {}
@@ -472,7 +381,6 @@ for section in fit_sections:
                                                      )
     
     
-#    print '\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ read RooATGCSemi\n'
     
     getattr(theWS, 'import')(data)
     for i in range(0,Nbkg_int):
@@ -480,8 +388,7 @@ for section in fit_sections:
     for j in range(0,Nbkg_int):
         for i in range(0,len(background_shapeSyst[j])):
             print '\t%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% adding bkgUp in ws: ',bkgHist_systUp[j][i]
-            #,' integral: ',bkgHist_systUp[j][i].Integral()
-
+ 
             getattr(theWS, 'import')(bkgHist_systUp[j][i])
             getattr(theWS, 'import')(bkgHist_systDown[j][i])
     getattr(theWS, 'import')(aTGCPdf)
@@ -554,7 +461,6 @@ rate                        {norm_sig_sm}\t""".format(codename=codename,norm_sig
 
 # if found signal or codename in the list of names that are affected by lnN unc:
         if (('%s_signal'%codename in lnN_for[i]) or (any(codename in s for s in lnN_for[i]))):
-#            print '\t-> writing out lnN '
             card+="""
 {lnN_name}         lnN """.format(lnN_name=lnN_name[i])
             if ('%s_signal'%codename in lnN_for[i]):
@@ -567,29 +473,13 @@ rate                        {norm_sig_sm}\t""".format(codename=codename,norm_sig
                 name_for_lnN=codename
                 name_for_lnN+='_'
                 name_for_lnN+=bkg_name[j]
-#                print '================================> name_for_lnN: ',name_for_lnN,' ?in? ',lnN_for[i]
                 if (name_for_lnN in lnN_for[i]):
-#                    print "=====================> ",name_for_lnN, " is in ",lnN_for[i]
                     index=lnN_for[i].index(name_for_lnN)
-#                    print "=======================> ", index
                     card+="""\t\t\t\t{lnN_value}""".format(lnN_value=lnN_value[i][index])
                 else:
                     card+="""\t\t\t\t-"""
            
     
-#    card += """           
-#------------
-#lumi_8TeV           lnN     1.044             """
-#    for i in range(0,Nbkg_int):
-#        card += """\t\t\t\t-"""
-    
-#    card += """       
-#CMS_eff_{codename[0]}           lnN     1.02          """.format(codename=codename,norm_sig_sm=norm_sig_sm,norm_bkg=norm_bkg[i],norm_obs=norm_obs)
-
-#    for i in range(0,Nbkg_int):
-#        card += """\t\t\t\t-"""
-
-
 
 
 ################ bkg shape syst:
@@ -618,9 +508,7 @@ rate                        {norm_sig_sm}\t""".format(codename=codename,norm_sig
                 if (isItCorrelated(signal_shapeSyst[i])):
                     isitcorr=false
                     for k in range(0,len(background_shapeSyst[j])):
-#                        print '===================== j= ',j, ' background_shapeSyst[0][k]= ', background_shapeSyst[j][k]
                         if (isItCorrelated(background_shapeSyst[j][k])):
-#                            card += """\t\t\t\t0.333""".format(codename=codename,norm_sig_sm=norm_sig_sm,norm_bkg=norm_bkg,norm_obs=norm_obs)
                             isitcorr=true
                     if (isitcorr):
                         card += """\t\t\t\t1.0""".format(codename=codename,norm_sig_sm=norm_sig_sm,norm_bkg=norm_bkg,norm_obs=norm_obs)
