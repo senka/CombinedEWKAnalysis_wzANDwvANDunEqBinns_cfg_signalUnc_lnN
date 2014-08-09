@@ -1,14 +1,5 @@
 [Global]
-NlnN=3
-lnN1_name=lumi_8TeV
-lnN1_value=1.026,1.026,1.026,1.026,1.026,1.026
-lnN1_for=mu_ZZ_4l_8TeV_SMasBKG_signal,mu_ZZ_4l_8TeV_SMasBKG_dibosonSM,el_ZZ_4l_8TeV_SMasBKG_signal,el_ZZ_4l_8TeV_SMasBKG_dibosonSM,elmu_ZZ_4l_8TeV_SMasBKG_signal,elmu_ZZ_4l_8TeV_SMasBKG_dibosonSM
-lnN2_name=pdf_VV
-lnN2_value=1.04,1.1,1.04,1.1,1.04,1.1
-lnN2_for=mu_ZZ_4l_8TeV_SMasBKG_signal,mu_ZZ_4l_8TeV_SMasBKG_dibosonSM,el_ZZ_4l_8TeV_SMasBKG_signal,el_ZZ_4l_8TeV_SMasBKG_dibosonSM,elmu_ZZ_4l_8TeV_SMasBKG_signal,elmu_ZZ_4l_8TeV_SMasBKG_dibosonSM
-lnN3_name=CMS_eff_c
-lnN3_value=1.03,1.03,1.03,1.03,1.03,1.03
-lnN3_for=mu_ZZ_4l_8TeV_SMasBKG_signal,mu_ZZ_4l_8TeV_SMasBKG_dibosonSM,el_ZZ_4l_8TeV_SMasBKG_signal,el_ZZ_4l_8TeV_SMasBKG_dibosonSM,elmu_ZZ_4l_8TeV_SMasBKG_signal,elmu_ZZ_4l_8TeV_SMasBKG_dibosonSM
+NlnN=0
 
 [mu_ZZ_4l_8TeV_SMasBKG]
 Nbkg=2
