@@ -40,15 +40,17 @@ void splitSignal_SMaTGC(TString inputFile){
 
     cout <<"reading file: "<<file_name<< "\t and correcting SM histo by "<< file_withCorrHisto_name<<":"<< CorrHisto_name <<"\t err anmes: "<<errNames<< endl;
 
+    
     std::vector<TString> histos_updown_v;
-    TObjArray *strL = errNames.Tokenize(",");
-
-   for (int k=0;k<strL->GetLast()+1;k++){
-    TString histo=((TObjString *)strL->At(k))->GetString();
-    histos_updown_v.push_back(histo);
-  }
-  delete strL;
-
+    if (errNames!="0"){
+      TObjArray *strL = errNames.Tokenize(",");
+      
+      for (int k=0;k<strL->GetLast()+1;k++){
+	TString histo=((TObjString *)strL->At(k))->GetString();
+	histos_updown_v.push_back(histo);
+      }
+      delete strL;
+    }
 
   
     // correcting SM histo with file_withCorrHisto:CorrHisto_name
