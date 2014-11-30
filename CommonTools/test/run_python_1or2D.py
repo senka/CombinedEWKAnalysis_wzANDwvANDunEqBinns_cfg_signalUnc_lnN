@@ -24,6 +24,7 @@ def main(argv):
     CL = ''
     prec = 0.001
     par = ''
+    no_par = ''
     min_val1 = ''
     max_val1 = ''
     min_val2 = ''
@@ -82,6 +83,8 @@ def main(argv):
             exp = True
         elif opt in ("-n", "--noUnc"):
             noUnc = True
+         
+            
     
     if ws_name=='' or CL=='' or par==''  or min_val1==''  or max_val1=='':
         
@@ -97,6 +100,17 @@ def main(argv):
         print 'python run_python_1or2D.py --inputfile Example_ZZ_SMasBKG.root --CLvalue 0.95 --precision 0.01 --parameter 2D --par1_minimum 0.0 --par1_maximum 0.3 --par2_minimum 0.0 --par2_maximum 0.1 --phi_value 45. --expected --toys 50'
         
         sys.exit(2)
+
+
+    if par=='lZ':
+        no_par='dkg'
+    if par=='dkg':
+        no_par='lZ'
+    if no_par=='' and not par=='2D':
+        print "ERROR: did not recognize parameter name!"
+        sys.exit()
+
+
     if par=="2D" and (min_val2=='' or max_val2==''):
         print 'Error -> did not define all necesary parameters for 2D (--inputfile, --CLvalue, --precision, --parameter, --par1_minimum, --par1_maximum, --par2_minimum, --par2_maximum) '
         print 'python run_python_1or2D.py --inputfile Example_ZZ_SMasBKG.root --CLvalue 0.95 --precision 0.01 --parameter lZ --par1_minimum 0.05 --par1_maximum 0.3'
@@ -176,11 +190,11 @@ def main(argv):
         file_output.write('1D limits\n')
         file_output.write('par(%s) \t CLsb \t CLsb_err \t output_file\n'%(par))
         
-        print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s_min"%(par,min_val1,name_add,ws_name,int(toys),par,min_val1,par,combine_add,par,min_val1,name_add)
-        os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s_min"%(par,min_val1,name_add,ws_name,int(toys),par,min_val1,par,combine_add,par,min_val1,name_add))
+        print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s > out_%s_%s_test_FC_%s_min"%(par,min_val1,name_add,ws_name,int(toys),par,min_val1,par,no_par,combine_add,par,min_val1,name_add)
+        os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s > out_%s_%s_test_FC_%s_min"%(par,min_val1,name_add,ws_name,int(toys),par,min_val1,par,no_par,combine_add,par,min_val1,name_add))
         
-        print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s_max"%(par,max_val1,name_add,ws_name,int(toys),par,max_val1,par,combine_add,par,max_val1,name_add)
-        os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s_max"%(par,max_val1,name_add,ws_name,int(toys),par,max_val1,par,combine_add,par,max_val1,name_add))
+        print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s> out_%s_%s_test_FC_%s_max"%(par,max_val1,name_add,ws_name,int(toys),par,max_val1,par,no_par,combine_add,par,max_val1,name_add)
+        os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s > out_%s_%s_test_FC_%s_max"%(par,max_val1,name_add,ws_name,int(toys),par,max_val1,par,no_par,combine_add,par,max_val1,name_add))
         
         CLsb_min, CLsberr_min =returnCLs("out_%s_%s_test_FC_%s_min"%(par,min_val1,name_add))
 #        print " -> output min : ",CLsb_min," ",CLsberr_min
@@ -197,11 +211,11 @@ def main(argv):
         file_output.write('2D limits\n')
         file_output.write('lZ \t dkg \t CLsb \t CLsb_err \t output_file\n')
         
-        print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_min"%("lZ",min_val1,"dkg",min_val2,name_add,ws_name,int(toys),"lZ",min_val1,"dkg",min_val2,"lZ","dkg",combine_add,"lZ",min_val1,"dkg",min_val2,"phi",phi_par,name_add)
-        os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_min"%("lZ",min_val1,"dkg",min_val2,name_add,ws_name,int(toys),"lZ",min_val1,"dkg",min_val2,"lZ","dkg",combine_add,"lZ",min_val1,"dkg",min_val2,"phi",phi_par,name_add))
+        print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_min"%("lZ",min_val1,"dkg",min_val2,name_add,ws_name,int(toys),"lZ",min_val1,"dkg",min_val2,"lZ","dkg",combine_add,"lZ",min_val1,"dkg",min_val2,"phi",phi_par,name_add)
+        os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_min"%("lZ",min_val1,"dkg",min_val2,name_add,ws_name,int(toys),"lZ",min_val1,"dkg",min_val2,"lZ","dkg",combine_add,"lZ",min_val1,"dkg",min_val2,"phi",phi_par,name_add))
     
-        print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_max"%("lZ",max_val1,"dkg",max_val2,name_add,ws_name,int(toys),"lZ",max_val1,"dkg",max_val2,"lZ","dkg",combine_add,"lZ",max_val1,"dkg",max_val2,"phi",phi_par,name_add)
-        os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_max"%("lZ",max_val1,"dkg",max_val2,name_add,ws_name,int(toys),"lZ",max_val1,"dkg",max_val2,"lZ","dkg",combine_add,"lZ",max_val1,"dkg",max_val2,"phi",phi_par,name_add))
+        print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_max"%("lZ",max_val1,"dkg",max_val2,name_add,ws_name,int(toys),"lZ",max_val1,"dkg",max_val2,"lZ","dkg",combine_add,"lZ",max_val1,"dkg",max_val2,"phi",phi_par,name_add)
+        os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s_max"%("lZ",max_val1,"dkg",max_val2,name_add,ws_name,int(toys),"lZ",max_val1,"dkg",max_val2,"lZ","dkg",combine_add,"lZ",max_val1,"dkg",max_val2,"phi",phi_par,name_add))
         
         CLsb_min, CLsberr_min =returnCLs("out_%s_%s_%s_%s_%s_%s_test_FC_%s_min"%("lZ",min_val1,"dkg",min_val2,"phi",phi_par,name_add))
         print " -> output min : ",CLsb_min," ",CLsberr_min
@@ -233,15 +247,15 @@ def main(argv):
         if not par=="2D":
             print " running 1D limits"
             
-            print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s"%(par,middle_val1,name_add,ws_name,int(toys),par,middle_val1,par,combine_add,par, middle_val1,name_add)
-            os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s %s > out_%s_%s_test_FC_%s"%(par,middle_val1,name_add,ws_name,int(toys),par,middle_val1,par,combine_add,par, middle_val1,name_add))
+            print "    combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s > out_%s_%s_test_FC_%s"%(par,middle_val1,name_add,ws_name,int(toys),par,middle_val1,par,no_par,combine_add,par, middle_val1,name_add)
+            os.system("combine -n _%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s --redefineSignalPOIs %s --freezeNuisances dg1,r,%s %s > out_%s_%s_test_FC_%s"%(par,middle_val1,name_add,ws_name,int(toys),par,middle_val1,par,no_par,combine_add,par, middle_val1,name_add))
             CLsb_middle, CLsberr_middle =returnCLs("out_%s_%s_test_FC_%s"%(par,middle_val1,name_add))
             file_output.write('%s \t %s \t %s \t higgsCombine_%s_%s_%s_.HybridNew.mH120.root\n'%(middle_val1,CLsb_middle,CLsberr_middle,par,middle_val1,name_add))
             
         else:
             print " running 2D limits"
-            print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s"%("lZ",middle_val1,"dkg",middle_val2,name_add,ws_name,int(toys), "lZ" ,middle_val1,"dkg" ,middle_val2, "lZ","dkg",combine_add, "lZ",middle_val1,"dkg" ,middle_val2,"phi",phi_par,name_add)
-            os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s"%("lZ",middle_val1,"dkg",middle_val2,name_add,ws_name,int(toys), "lZ" ,middle_val1,"dkg" ,middle_val2, "lZ","dkg",combine_add, "lZ",middle_val1,"dkg" ,middle_val2,"phi",phi_par,name_add))
+            print "    combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s"%("lZ",middle_val1,"dkg",middle_val2,name_add,ws_name,int(toys), "lZ" ,middle_val1,"dkg" ,middle_val2, "lZ","dkg",combine_add, "lZ",middle_val1,"dkg" ,middle_val2,"phi",phi_par,name_add)
+            os.system("combine -n _%s_%s_%s_%s_%s_ %s -M HybridNew --freq --testStat=PL --rule=CLsplusb --toysH=%s --singlePoint %s=%s,%s=%s --redefineSignalPOIs %s,%s --freezeNuisances dg1,r %s > out_%s_%s_%s_%s_%s_%s_test_FC_%s"%("lZ",middle_val1,"dkg",middle_val2,name_add,ws_name,int(toys), "lZ" ,middle_val1,"dkg" ,middle_val2, "lZ","dkg",combine_add, "lZ",middle_val1,"dkg" ,middle_val2,"phi",phi_par,name_add))
             CLsb_middle, CLsberr_middle =returnCLs("out_%s_%s_%s_%s_%s_%s_test_FC_%s"%( "lZ",middle_val1,"dkg",middle_val2,"phi",phi_par,name_add))
             file_output.write('%s \t %s \t %s \t %s \t higgsCombine_%s_%s_%s_%s_%s_.HybridNew.mH120.root\n'%(middle_val1,middle_val2,CLsb_middle,CLsberr_middle,"lZ",middle_val1,"dkg",middle_val2,name_add))
             
